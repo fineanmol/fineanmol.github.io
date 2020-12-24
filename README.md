@@ -17,10 +17,10 @@
 
 ---
 ### 🌱 I’m currently learning
-Distributed system development, Microservices! An agile approch to every solution. 
+Flutter , API's creation!, and An agile approch to every solution. 
 
 ---
-Hi, I'm [Anmol Agarwal](), a Full Stack Developer 🚀 from India, currently. Beside's programming, I enjoy eating food and traveling.
+Hi, I'm [Anmol Agarwal](), a Full Stack Developer 🚀 from India, currently. Beside's programming, I enjoy listening music and traveling.
 
   <img align="right" alt="GIF" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="500" height="320" />
   
