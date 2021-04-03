@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/fineanmol.github.io/static/css/main.201d61ca.chunk.css",
+    "main.js": "/fineanmol.github.io/static/js/main.3aaee1c4.chunk.js",
+    "main.js.map": "/fineanmol.github.io/static/js/main.3aaee1c4.chunk.js.map",
+    "runtime-main.js": "/fineanmol.github.io/static/js/runtime-main.d9f928af.js",
+    "runtime-main.js.map": "/fineanmol.github.io/static/js/runtime-main.d9f928af.js.map",
+    "static/js/2.00430aca.chunk.js": "/fineanmol.github.io/static/js/2.00430aca.chunk.js",
+    "static/js/2.00430aca.chunk.js.map": "/fineanmol.github.io/static/js/2.00430aca.chunk.js.map",
+    "static/css/3.2f42733b.chunk.css": "/fineanmol.github.io/static/css/3.2f42733b.chunk.css",
+    "static/js/3.969b4720.chunk.js": "/fineanmol.github.io/static/js/3.969b4720.chunk.js",
+    "static/js/3.969b4720.chunk.js.map": "/fineanmol.github.io/static/js/3.969b4720.chunk.js.map",
+    "static/css/4.2c2edb1e.chunk.css": "/fineanmol.github.io/static/css/4.2c2edb1e.chunk.css",
+    "static/js/4.62aca988.chunk.js": "/fineanmol.github.io/static/js/4.62aca988.chunk.js",
+    "static/js/4.62aca988.chunk.js.map": "/fineanmol.github.io/static/js/4.62aca988.chunk.js.map",
+    "index.html": "/fineanmol.github.io/index.html",
+    "static/css/3.2f42733b.chunk.css.map": "/fineanmol.github.io/static/css/3.2f42733b.chunk.css.map",
+    "static/css/4.2c2edb1e.chunk.css.map": "/fineanmol.github.io/static/css/4.2c2edb1e.chunk.css.map",
+    "static/css/main.201d61ca.chunk.css.map": "/fineanmol.github.io/static/css/main.201d61ca.chunk.css.map",
+    "static/js/2.00430aca.chunk.js.LICENSE.txt": "/fineanmol.github.io/static/js/2.00430aca.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/fineanmol.github.io/static/media/Montserrat-Regular.3cd78665.ttf",
+    "static/media/contactMailDark.svg": "/fineanmol.github.io/static/media/contactMailDark.1db650d3.svg",
+    "static/media/developerActivity.svg": "/fineanmol.github.io/static/media/developerActivity.2c0445ca.svg",
+    "static/media/google.png": "/fineanmol.github.io/static/media/google.913bbd81.png",
+    "static/media/gulogo.png": "/fineanmol.github.io/static/media/gulogo.77d90df6.png",
+    "static/media/infosys.png": "/fineanmol.github.io/static/media/infosys.bc13f8e8.png",
+    "static/media/manOnTable.svg": "/fineanmol.github.io/static/media/manOnTable.8f117eb2.svg",
+    "static/media/nextuLogo.webp": "/fineanmol.github.io/static/media/nextuLogo.e033dbfa.webp",
+    "static/media/nightowl.png": "/fineanmol.github.io/static/media/nightowl.fbd435b8.png",
+    "static/media/pwaLogo.webp": "/fineanmol.github.io/static/media/pwaLogo.8bf2293d.webp",
+    "static/media/saayaHealthLogo.webp": "/fineanmol.github.io/static/media/saayaHealthLogo.60b27d1f.webp",
+    "static/media/skill.svg": "/fineanmol.github.io/static/media/skill.35a14766.svg",
+    "static/media/stanfordLogo.png": "/fineanmol.github.io/static/media/stanfordLogo.5a8e3a0a.png",
+    "static/media/TalkCard.css": "/fineanmol.github.io/static/media/talksCardBack.99241699.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9f928af.js",
+    "static/js/2.00430aca.chunk.js",
+    "static/css/main.201d61ca.chunk.css",
+    "static/js/main.3aaee1c4.chunk.js"
+  ]
+}
