@@ -4,6 +4,7 @@
 
 import emoji from 'react-easy-emoji';
 
+
 const illustration = {
   animated: true, // set to false to use static SVG
 };
@@ -27,8 +28,10 @@ const socialMediaLinks = {
   gmail: 'anmol.agarwal2004@yahoo.com',
  // gitlab: 'https://gitlab.com/fineanmol',
   facebook: 'https://www.facebook.com/fineanmol',
+  twitter: 'https://twitter.com/fineanmol',
+  instagram: 'http://instagram.com/fineanmol',
   //medium: 'https://medium.com/@fineanmol',
- // stackoverflow: 'https://stackoverflow.com/users/10422806/fineanmola',
+  // stackoverflow: 'https://stackoverflow.com/users/10422806/fineanmola',
   // Instagram and Twitter are also supported in the links!
   display: true, // Set true to display this section, defaults to false
 };
@@ -42,7 +45,7 @@ const skillsSection = {
     emoji(
       '⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications'
     ),
-    emoji('⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks'),
+    emoji('⚡ Progressive Web Applications in Android Stacks'),
     emoji(
       '⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean'
     ),
@@ -119,12 +122,12 @@ const educationInfo = {
   schools: [
     {
       schoolName: 'Galgotias University',
-      logo: require('./assets/images/gulogo.png'),
+      logo:require('./assets/images/gulogo.png'),
       subHeader: 'Bachelor of Technology in Computer Science',
       duration: 'September 2015 - August 2019',
-      desc: 'Participated in the research of Advanced Threat Detection System and organized 2 hackathons.\n ',
-      descBullets: [
-        'Ranked top 1% in the program #Medalist',
+      desc: '',
+      descBullets: ['Participated in the Research of Advanced Threat Detection System and organized 2 hackathons.\n ',
+        'Ranked top 1% in the graduation program #Medalist',
         'Took courses about Software Engineering, Web Security, Operating Systems, ...',
       ],
     },
@@ -134,8 +137,8 @@ const educationInfo = {
       subHeader: 'Senior Secondary School',
       duration: 'March 2014 - April 2015',
       desc:
-        'Scored 90% with Mathematics, Physics and Chemistry as my major subjects.',
-      descBullets: ['Awarded Reward for development of School Website'],
+        '',
+      descBullets: ['Scored 90% with Mathematics, Physics and Chemistry as my major subjects. '],
     },
   ],
 };
@@ -147,7 +150,7 @@ const techStack = {
   experience: [
     {
       Stack: 'Frontend/Design', //Insert stack or technology you have experience in
-      progressPercentage: '90%', //Insert relative proficiency in percentage
+      progressPercentage: '85%', //Insert relative proficiency in percentage
     },
     {
       Stack: 'Backend',
@@ -155,7 +158,7 @@ const techStack = {
     },
     {
       Stack: 'Programming',
-      progressPercentage: '90%',
+      progressPercentage: '95%',
     },
   ],
   displayCodersrank: false, // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -171,19 +174,24 @@ const workExperiences = {
     company: 'NightOwlDevelopers',
     companylogo: require('./assets/images/nightowl.png'),
     date: 'Jan 2018 – Present',
-    desc:
-      'NightOwls is a crreative digital agency. A team of "A-Players" designers and developers who can plan and build digital products for your business/project. We specialize in building responsive strategy custom, user interface/experience design websites.' ,
+    desc:'',
+      descBullets: [
+        'I have started @NightOwlDevelopers with a vision to create meaningful work at the intersection of experience and technology- and to do so in a fun and sustainable work environment. ',
+        'We have led organic growth at NightOwl since then, wearing many hats along the way.✨',
+      ],
   },
     {
       role: 'Software Engineer',
       company: 'Infosys Ltd',
       companylogo: require('./assets/images/infosys.png'),
       date: 'September 2019 – Present',
-      desc:
-        'Worked in Novartis Project, a US leading Pharmaceutical company. Tools and Technologies used: .Net, C#, MS SQL, Python, Android with Kotlin, GIT HUb, Atom etc',
+      // desc:
+      //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       descBullets: [
-        'Currently working for ALSTOM group, which manage Metro trains in Europe countires like France,Germany and some Indian Metros too',
-   
+        '1.8 years of experience, with Infosys in ALSTOM Project,a French multinational rolling stock manufacturer',
+' Worked in Novartis Project, a US leading Pharmaceutical company.',
+'Tool and Technologies: .Net, C#, MS SQL, Python, Android with Kotlin, GIT Hub, Atom, Beyond Compare, Visual Studio Code Deploy',
+       
       ],
     },
     {
@@ -191,9 +199,13 @@ const workExperiences = {
       company: 'Infosys Ltd',
       companylogo: require('./assets/images/infosys.png'),
       date: 'Jan 2019 – May 2019',
-      desc:
-'Completed 24 weeks Internship Training Program, and Trained as Full stack developer in Microsoft Track technologies(Asp .Net and C#)', 
-   },
+     // desc:'',
+     descBullets: [
+      'Complete 24 weeks Internship Training Program',
+      'Completed Full stack developer training in Microsoft Track (Lang used: Asp .Net, C#, MS SQL, Bootstrap, CSS, HTML)',
+     
+    ],
+    },
     
   ],
 };
@@ -215,9 +227,10 @@ const bigProjects = {
   subtitle: 'SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH',
   projects: [
     {
-      image: require('./assets/images/saayaHealthLogo.webp'),
-      projectName: "TFB",
-      projectDesc: "TheFlyingBasket.com is an online portal where you can get Affordable Chemical free fruits, Vegetables, All Grocery items and personal care in best price at your door step.",
+      image: require('./assets/images/gulogo.png'),
+      projectName: "TheFlyingBasket.com",
+      projectDesc: "It is an online portal where you can get Affordable Chemical Free Fruits , Vegetables , All Grocery items and Personal care in best price at your door step. You can select and purchase a wide variety of fruits and vegetables merely sitting at home. ",
+     
       footerLink: [
         {
           name: 'Visit Website',
@@ -230,7 +243,7 @@ const bigProjects = {
     {
       image: require('./assets/images/nextuLogo.webp'),
       projectName: "Mirai Vizion",
-      projectDesc: "An AI-based product which helps the customer to advertise their products in no time. Isn't great not cities, states, but you can also advertise your products in counties with this tech.",
+      projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
       footerLink: [
         {
           name: 'Visit Mirai Vizion',
@@ -295,13 +308,13 @@ const achievementSection = {
     },
 
     {
-      title: 'Parker Solar Probe - NASA',
-      subtitle: 'In May 2017, NASA renamed the spacecraft from the Solar Probe Plus to the Parker Solar Probe in honor of astrophysicist Eugene Parker. Here a memory Card Containing my name was in included on the Parker Solar Probe spacecraft.',
+      title: 'PWA Web App Developer',
+      subtitle: 'Completed Certifcation from SMIT for PWA Web App Development',
       image: require('./assets/images/pwaLogo.webp'),
       footerLink: [
-        { name: 'NameSendToMars', url: '' },
+        { name: 'Certification', url: '' },
         {
-          name: 'NameIncludedonNASAspacecraft',
+          name: 'Final Project',
           url: 'https://pakistan-olx-1.firebaseapp.com/',
         },
       ],
@@ -364,7 +377,7 @@ const podcastSection = {
   podcast: [
    // 'https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo',
   ],
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
@@ -378,7 +391,7 @@ const contactInfo = {
 // Twitter Section
 
 const twitterDetails = {
-  userName: 'nightowldevelopers', //Replace "twitter" with your twitter username without @
+  userName: 'fineanmol', //Replace "twitter" with your twitter username without @
   display: true, // Set true to display this section, defaults to false
 };
 
