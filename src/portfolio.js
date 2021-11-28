@@ -5,6 +5,7 @@
 import emoji from 'react-easy-emoji';
 
 
+
 const illustration = {
   animated: true, // set to false to use static SVG
 };
@@ -122,18 +123,18 @@ const educationInfo = {
   schools: [
     {
       schoolName: 'Galgotias University',
-      logo:require('./assets/images/gulogo.png'),
-      subHeader: 'Bachelor of Technology in Computer Science',
+      logo: require("./assets/images/airbnbLogo.png"),
+      subHeader: emoji('Bachelor of Technology in Computer Science (🥉 Medalist)'),
       duration: 'September 2015 - August 2019',
       desc: '',
       descBullets: ['Participated in the Research of Advanced Threat Detection System and organized 2 hackathons.\n ',
-        'Ranked top 1% in the graduation program #Medalist',
+        emoji('Ranked top 1% in the graduation program #Medalist🥉'),
         'Took courses about Software Engineering, Web Security, Operating Systems, ...',
       ],
     },
     {
       schoolName: 'Saraswati Vidya Mandir',
-      logo: require('./assets/images/stanfordLogo.png'),
+      logo:require('./assets/images/gulogo.png'),
       subHeader: 'Senior Secondary School',
       duration: 'March 2014 - April 2015',
       desc:
@@ -161,7 +162,7 @@ const techStack = {
       progressPercentage: '95%',
     },
   ],
-  displayCodersrank: false, // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: true, // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
 
 // Work experience section
@@ -238,6 +239,30 @@ const bigProjects = {
             'http://theflyingbasket.com/',
         },
         //  you can add extra buttons here.
+      ],
+    },
+    {
+      image: require('./assets/images/nextuLogo.webp'),
+      projectName: "Mirai Vizion",
+      projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
+      footerLink: [
+        {
+          name: 'Visit Mirai Vizion',
+          url:
+            'http://miraivision.com/',
+        },
+      ],
+    },
+    {
+      image: require('./assets/images/nextuLogo.webp'),
+      projectName: "Mirai Vizion",
+      projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
+      footerLink: [
+        {
+          name: 'Visit Mirai Vizion',
+          url:
+            'http://miraivision.com/',
+        },
       ],
     },
     {
@@ -344,6 +369,30 @@ const blogSection = {
       description:
         'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
     },
+    {
+      url: 'http://instagram.com/fineanmol/',
+      title: 'Why REACT is The Best?',
+      description:
+        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
+    },
+    {
+      url: 'http://instagram.com/fineanmol/',
+      title: 'Why REACT is The Best?',
+      description:
+        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
+    },
+    {
+      url: 'http://instagram.com/fineanmol/',
+      title: 'Why REACT is The Best?',
+      description:
+        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
+    },
+    {
+      url: 'http://instagram.com/fineanmol/',
+      title: 'Why REACT is The Best?',
+      description:
+        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
+    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
@@ -364,7 +413,7 @@ const talkSection = {
       event_url: 'https://www.facebook.com/events/2339906106275053/',
     },
   ],
-  display: false, // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -377,7 +426,7 @@ const podcastSection = {
   podcast: [
    // 'https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo',
   ],
-  display: false, // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {

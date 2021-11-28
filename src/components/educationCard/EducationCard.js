@@ -12,6 +12,8 @@ export default function EducationCard({ school }) {
       : null;
   };
   const { isDark } = useContext(StyleContext);
+  
+  
   return (
     <div>
       <Fade left duration={1000}>
@@ -23,6 +25,7 @@ export default function EducationCard({ school }) {
               className="education-roundedimg"
               src={school.logo}
               alt={school.schoolName}
+              
             />
           </div>
           <div className="education-card-right">
