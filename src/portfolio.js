@@ -253,25 +253,26 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-    role: 'Founder @NightOwlDevelopers',
-    company: 'NightOwlDevelopers',
+    role: 'Senior Systems Engineer',
+    company: 'Infosys Ltd.',
     companylogo: require('./assets/images/nightowl.png'),
-    date: 'Jan 2018 – Present',
+    date: 'Oct 2021 – Present',
     desc:'',
       descBullets: [
-        'I have started @NightOwlDevelopers with a vision to create meaningful work at the intersection of experience and technology- and to do so in a fun and sustainable work environment. ',
-        'We have led organic growth at NightOwl since then, wearing many hats along the way.✨',
+        'I have been Building robust System for ALSTOM, a French Multinational Fleet manufacturer(France-Europe Metro Fleets).',
+        'As a part of UI development team, helped in migration of legacy code to React which solved 90% of UX issues. ',
+        'I have done collaborations across multiple teams to ensure proper deployment of all components thus providing a GitLab pipeline of high efficiency..✨',
       ],
   },
     {
       role: 'Software Engineer',
       company: 'Infosys Ltd',
       companylogo: require('./assets/images/infosys.png'),
-      date: 'September 2019 – Present',
+      date: 'September 2019 – September 2021',
       // desc:
       //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       descBullets: [
-        '1.8 years of experience, with Infosys in ALSTOM Project,a French multinational rolling stock manufacturer',
+       
 ' Worked in Novartis Project, a US leading Pharmaceutical company.',
 'Tool and Technologies: .Net, C#, MS SQL, Python, Android with Kotlin, GIT Hub, Atom, Beyond Compare, Visual Studio Code Deploy',
        
