@@ -1,4 +1,4 @@
-﻿/* Change this file to get your personal Portfolio */
+/* Change this file to get your personal Portfolio */
 
 // Summary And Greeting Section
 
@@ -7,7 +7,7 @@ import emoji from 'react-easy-emoji';
 
 
 const illustration = {
-  animated: false, // set to false to use static SVG
+  animated: true, // set to false to use static SVG
 };
 
 const greeting = {
