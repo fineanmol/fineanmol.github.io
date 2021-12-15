@@ -205,7 +205,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: 'Galgotias University',
-      logo: require("./assets/images/airbnbLogo.png"),
+      logo: require("./assets/images/airbnbLogo.png").default,
       subHeader: emoji('Bachelor of Technology in Computer Science (🥉 Medalist)'),
       duration: 'September 2015 - August 2019',
       desc: '',
@@ -216,7 +216,7 @@ const educationInfo = {
     },
     {
       schoolName: 'Saraswati Vidya Mandir',
-      logo:require('./assets/images/gulogo.png'),
+      logo:require('./assets/images/gulogo.png').default,
       subHeader: 'Senior Secondary School',
       duration: 'March 2014 - April 2015',
       desc:
@@ -255,10 +255,11 @@ const workExperiences = {
     {
     role: 'Senior Systems Engineer',
     company: 'Infosys Ltd.',
-    companylogo: require('./assets/images/nightowl.png'),
+    companylogo: require('./assets/images/nightowl.png').default,
     date: 'Oct 2021 – Present',
     desc:'',
       descBullets: [
+       
         'I have been Building robust System for ALSTOM, a French Multinational Fleet manufacturer(France-Europe Metro Fleets).',
         'As a part of UI development team, helped in migration of legacy code to React which solved 90% of UX issues. ',
         'I have done collaborations across multiple teams to ensure proper deployment of all components thus providing a GitLab pipeline of high efficiency..✨',
@@ -267,21 +268,21 @@ const workExperiences = {
     {
       role: 'Software Engineer',
       company: 'Infosys Ltd',
-      companylogo: require('./assets/images/infosys.png'),
+      companylogo: require('./assets/images/infosys.png').default,
       date: 'September 2019 – September 2021',
       // desc:
       //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       descBullets: [
-       
-' Worked in Novartis Project, a US leading Pharmaceutical company.',
+        ' Worked in Novartis Project, a US leading Pharmaceutical company.',
 'Tool and Technologies: .Net, C#, MS SQL, Python, Android with Kotlin, GIT Hub, Atom, Beyond Compare, Visual Studio Code Deploy',
+       
        
       ],
     },
     {
       role: 'SDE @Intern',
       company: 'Infosys Ltd',
-      companylogo: require('./assets/images/infosys.png'),
+      companylogo: require('./assets/images/infosys.png').default,
       date: 'Jan 2019 – May 2019',
      // desc:'',
      descBullets: [
@@ -311,8 +312,8 @@ const bigProjects = {
   subtitle: 'SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH',
   projects: [
     {
-      image: require('./assets/images/gulogo.png'),
-      projectName: "TheFlyingBasket.com",
+      image: require('./assets/images/gulogo.png').default,
+      projectName: "TheFlyingBasket",
       projectDesc: "It is an online portal where you can get Affordable Chemical Free Fruits , Vegetables , All Grocery items and Personal care in best price at your door step. You can select and purchase a wide variety of fruits and vegetables merely sitting at home. ",
      
       footerLink: [
@@ -324,42 +325,32 @@ const bigProjects = {
         //  you can add extra buttons here.
       ],
     },
+    
     {
-      image: require('./assets/images/nextuLogo.webp'),
+      image: require('./assets/images/nextuLogo.webp').default,
       projectName: "Mirai Vizion",
       projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
       footerLink: [
         {
           name: 'Visit Mirai Vizion',
           url:
-            'http://miraivision.com/',
+            'http://miraivizion.com/',
         },
       ],
     },
     {
-      image: require('./assets/images/nextuLogo.webp'),
-      projectName: "Mirai Vizion",
-      projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
-      footerLink: [
+      image: require('./assets/images/hindcon.png').default,
+      projectName: "Hindcon.com",
+      projectDesc: "It is an online portal where you can get Affordable Chemicals for your home and Factory plant in best price at your door step. You can select and purchase a wide variety of waterproofing and repair servicing chemicals merely sitting at home. ",
+     footerLink: [
         {
-          name: 'Visit Mirai Vizion',
+          name: 'Visit Hindcon Chemicals',
           url:
-            'http://miraivision.com/',
+            'https://hindcon.com/',
         },
       ],
     },
-    {
-      image: require('./assets/images/nextuLogo.webp'),
-      projectName: "Mirai Vizion",
-      projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
-      footerLink: [
-        {
-          name: 'Visit Mirai Vizion',
-          url:
-            'http://miraivision.com/',
-        },
-      ],
-    },
+ 
   ],
   display: true, // Set false to hide this section, defaults to true
 };
@@ -373,34 +364,12 @@ const achievementSection = {
     'Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !',
 
   achievementsCards: [
-    {
-      title: 'Google SWE Internship 2021',
-      subtitle:
-        'Selected as Google SWE 2021 Intern from 40000 students from 77 different countries.',
-      image: require('./assets/images/google.png'),
-      footerLink: [
-        {
-          name: 'Certification',
-          url:
-            'https://www.linkedin.com/posts/fineanmol_googlesweinternship2021-google-internship-activity-6704404259200389121-hWxh',
-        },
-        {
-          name: 'Award Letter',
-          url:
-            'https://www.linkedin.com/posts/fineanmol_googlesweinternship2021-google-internship-activity-6704404259200389121-hWxh',
-        },
-        {
-          name: 'Google Code-in Blog',
-          url:
-            'https://www.linkedin.com/posts/fineanmol_googlesweinternship2021-google-internship-activity-6704404259200389121-hWxh',
-        },
-      ],
-    },
+    
     {
       title: 'Bronze Medalist',
       subtitle:
         'Received Bronze Medal and Certificate for the Academic excellence performace in my B.Tech CSE Graduation.',
-      image: require('./assets/images/gulogo.png'),
+      image: require('./assets/images/gulogo.png').default,
       footerLink: [
         {
           name: 'View Medal',
@@ -416,14 +385,26 @@ const achievementSection = {
     },
 
     {
-      title: 'PWA Web App Developer',
-      subtitle: 'Completed Certifcation from SMIT for PWA Web App Development',
-      image: require('./assets/images/pwaLogo.webp'),
+      title: 'Digital Ocean OpenSource Contributor',
+      subtitle: 'Won Prizes on HacktoberFest Event ',
+      image: require('./assets/images/digitalocean.png').default,
       footerLink: [
-        { name: 'Certification', url: '' },
+        { name: 'Swags', url: 'https://www.linkedin.com/posts/fineanmol_hacktoberfest-hacktoberfest2020-opensource-activity-6769234540062916608-ih0S' },
+        {
+          name: 'Rewards',
+          url: 'https://www.linkedin.com/posts/fineanmol_hacktoberfest-hacktoberfest2020-opensource-activity-6769234540062916608-ih0S',
+        },
+      ],
+    },
+    {
+      title: 'IBM Quantum Business Badge',
+      subtitle: 'Won Prizes on HacktoberFest Event ',
+      image: require('./assets/images/ibm.png').default,
+      footerLink: [
+        { name: 'Rewards', url: 'https://www.linkedin.com/posts/fineanmol_infosys-ibm-ibmquantum-activity-6789256112379105280-GtqI' },
         {
           name: 'Final Project',
-          url: 'https://pakistan-olx-1.firebaseapp.com/',
+          url: 'https://www.linkedin.com/posts/fineanmol_hacktoberfest-hacktoberfest2020-opensource-activity-6769234540062916608-ih0S',
         },
       ],
     },
@@ -441,41 +422,37 @@ const blogSection = {
   blogs: [
     {
       url:
-        'https://anmolawesometricks.blogspot.com/2016/01/create-public-folder-where-anyone-can.html',
-      title: 'A public folder where anyone can Add Files?',
+        'https://www.linkedin.com/posts/fineanmol_git-developer-softwaredeveloper-activity-6838040772248428544-OaW7',
+      title: 'Git commands',
       description:
-        'Dropbox and SkyDrive allow you to have “Shared Folders” where a folder is shared between all members of the group. Any member can contribute files to...',
+        'Awesome notes on #git command by Tomomi Imura ( Creative Idea💡)...',
     },
     {
-      url: 'http://instagram.com/fineanmol/',
-      title: 'Why REACT is The Best?',
+      url: 'https://www.linkedin.com/posts/fineanmol_docker-activity-6857287152917626881-wwWJ',
+      title: 'What is Docker?',
       description:
-        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
+''    },
+    {
+      url: 'https://www.linkedin.com/posts/fineanmol_kubernetes-kubernetes-kubernetessecurity-activity-6860672331719745536-mbUr',
+      title: 'What is Kubernetes?',
+      description:
+''    },
+    {
+      url: 'https://www.linkedin.com/posts/fineanmol_devops-devopscommunity-devops-activity-6861596540230799361-TkdW',
+      title: 'What is DevOps?',
+      description:''
+
     },
     {
-      url: 'http://instagram.com/fineanmol/',
-      title: 'Why REACT is The Best?',
+      url: 'https://www.linkedin.com/posts/fineanmol_cloudcomputing-cloud-cloudgovernance-activity-6866967266261565440-vEq6',
+      title: 'What is Cloud Computing?',
       description:
-        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
-    },
+''    },
     {
-      url: 'http://instagram.com/fineanmol/',
-      title: 'Why REACT is The Best?',
+      url: 'https://www.linkedin.com/posts/fineanmol_api-apiintegration-apimanagement-activity-6869510567439204352-RGtI',
+      title: 'What is API?',
       description:
-        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
-    },
-    {
-      url: 'http://instagram.com/fineanmol/',
-      title: 'Why REACT is The Best?',
-      description:
-        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
-    },
-    {
-      url: 'http://instagram.com/fineanmol/',
-      title: 'Why REACT is The Best?',
-      description:
-        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
-    },
+''    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
@@ -496,7 +473,7 @@ const talkSection = {
       event_url: 'https://www.facebook.com/events/2339906106275053/',
     },
   ],
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -509,7 +486,7 @@ const podcastSection = {
   podcast: [
    // 'https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo',
   ],
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
