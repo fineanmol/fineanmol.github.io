@@ -253,27 +253,29 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-    role: 'Founder @NightOwlDevelopers',
-    company: 'NightOwlDevelopers',
+    role: 'Senior Systems Engineer',
+    company: 'Infosys Ltd.',
     companylogo: require('./assets/images/nightowl.png').default,
-    date: 'Jan 2018 – Present',
+    date: 'Oct 2021 – Present',
     desc:'',
       descBullets: [
-        'I have started @NightOwlDevelopers with a vision to create meaningful work at the intersection of experience and technology- and to do so in a fun and sustainable work environment. ',
-        'We have led organic growth at NightOwl since then, wearing many hats along the way.✨',
+       
+        'I have been Building robust System for ALSTOM, a French Multinational Fleet manufacturer(France-Europe Metro Fleets).',
+        'As a part of UI development team, helped in migration of legacy code to React which solved 90% of UX issues. ',
+        'I have done collaborations across multiple teams to ensure proper deployment of all components thus providing a GitLab pipeline of high efficiency..✨',
       ],
   },
     {
       role: 'Software Engineer',
       company: 'Infosys Ltd',
       companylogo: require('./assets/images/infosys.png').default,
-      date: 'September 2019 – Present',
+      date: 'September 2019 – September 2021',
       // desc:
       //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       descBullets: [
-        '1.8 years of experience, with Infosys in ALSTOM Project,a French multinational rolling stock manufacturer',
-' Worked in Novartis Project, a US leading Pharmaceutical company.',
+        ' Worked in Novartis Project, a US leading Pharmaceutical company.',
 'Tool and Technologies: .Net, C#, MS SQL, Python, Android with Kotlin, GIT Hub, Atom, Beyond Compare, Visual Studio Code Deploy',
+       
        
       ],
     },
@@ -311,7 +313,7 @@ const bigProjects = {
   projects: [
     {
       image: require('./assets/images/gulogo.png').default,
-      projectName: "TheFlyingBasket.com",
+      projectName: "TheFlyingBasket",
       projectDesc: "It is an online portal where you can get Affordable Chemical Free Fruits , Vegetables , All Grocery items and Personal care in best price at your door step. You can select and purchase a wide variety of fruits and vegetables merely sitting at home. ",
      
       footerLink: [
@@ -323,6 +325,7 @@ const bigProjects = {
         //  you can add extra buttons here.
       ],
     },
+    
     {
       image: require('./assets/images/nextuLogo.webp').default,
       projectName: "Mirai Vizion",
@@ -331,34 +334,23 @@ const bigProjects = {
         {
           name: 'Visit Mirai Vizion',
           url:
-            'http://miraivision.com/',
+            'http://miraivizion.com/',
         },
       ],
     },
     {
       image: require('./assets/images/nextuLogo.webp').default,
-      projectName: "Mirai Vizion",
-      projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
-      footerLink: [
+      projectName: "Hindcon.com",
+      projectDesc: "It is an online portal where you can get Affordable Chemicals for your home and Factory plant in best price at your door step. You can select and purchase a wide variety of waterproofing and repair servicing chemicals merely sitting at home. ",
+     footerLink: [
         {
-          name: 'Visit Mirai Vizion',
+          name: 'Visit Hindcon Chemicals',
           url:
-            'http://miraivision.com/',
+            'https://hindcon.com/',
         },
       ],
     },
-    {
-      image: require('./assets/images/nextuLogo.webp').default,
-      projectName: "Mirai Vizion",
-      projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
-      footerLink: [
-        {
-          name: 'Visit Mirai Vizion',
-          url:
-            'http://miraivision.com/',
-        },
-      ],
-    },
+ 
   ],
   display: true, // Set false to hide this section, defaults to true
 };
@@ -372,29 +364,7 @@ const achievementSection = {
     'Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !',
 
   achievementsCards: [
-    {
-      title: 'Google SWE Internship 2021',
-      subtitle:
-        'Selected as Google SWE 2021 Intern from 40000 students from 77 different countries.',
-      image: require('./assets/images/google.png').default,
-      footerLink: [
-        {
-          name: 'Certification',
-          url:
-            'https://www.linkedin.com/posts/fineanmol_googlesweinternship2021-google-internship-activity-6704404259200389121-hWxh',
-        },
-        {
-          name: 'Award Letter',
-          url:
-            'https://www.linkedin.com/posts/fineanmol_googlesweinternship2021-google-internship-activity-6704404259200389121-hWxh',
-        },
-        {
-          name: 'Google Code-in Blog',
-          url:
-            'https://www.linkedin.com/posts/fineanmol_googlesweinternship2021-google-internship-activity-6704404259200389121-hWxh',
-        },
-      ],
-    },
+    
     {
       title: 'Bronze Medalist',
       subtitle:
@@ -415,8 +385,8 @@ const achievementSection = {
     },
 
     {
-      title: 'PWA Web App Developer',
-      subtitle: 'Completed Certifcation from SMIT for PWA Web App Development',
+      title: 'Infosys Android App Developer',
+      subtitle: 'Completed Certifcation from Infosys for Kotlin App Development',
       image: require('./assets/images/pwaLogo.webp').default,
       footerLink: [
         { name: 'Certification', url: '' },
@@ -427,7 +397,7 @@ const achievementSection = {
       ],
     },
   ],
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Blogs Section
@@ -476,7 +446,7 @@ const blogSection = {
         'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
     },
   ],
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -495,7 +465,7 @@ const talkSection = {
       event_url: 'https://www.facebook.com/events/2339906106275053/',
     },
   ],
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -508,7 +478,7 @@ const podcastSection = {
   podcast: [
    // 'https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo',
   ],
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
