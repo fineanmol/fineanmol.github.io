@@ -17,7 +17,7 @@ const greeting = {
     'A passionate individual who always thrive to work on end to end products 🚀 which develop sustainable and scalable social and technical systems to create impact.  '
   ),
   resumeLink:
-    'https://drive.google.com/file/d/1vNMuEYdWEqdLh8QzdeT7ef7_6_UCx231/view?usp=sharingg',
+    'https://drive.google.com/drive/folders/18Z2EjozJsjy1OQeT0vLaCkhOFY0AYgsM?usp=sharing',
     repoLink:'https://github.com/fineanmol/fineanmol.github.io',
   displayGreeting: true, // Set false to hide this section, defaults to true
 };
@@ -205,7 +205,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: 'Galgotias University',
-      logo: require("./assets/images/airbnbLogo.png").default,
+      logo: require("./assets/images/gulogo.png").default,
       subHeader: emoji('Bachelor of Technology in Computer Science (🥉 Medalist)'),
       duration: 'September 2015 - August 2019',
       desc: '',
@@ -216,7 +216,7 @@ const educationInfo = {
     },
     {
       schoolName: 'Saraswati Vidya Mandir',
-      logo:require('./assets/images/gulogo.png').default,
+      logo:require('./assets/images/school.jpg').default,
       subHeader: 'Senior Secondary School',
       duration: 'March 2014 - April 2015',
       desc:
@@ -255,7 +255,7 @@ const workExperiences = {
     {
     role: 'Senior Systems Engineer',
     company: 'Infosys Ltd.',
-    companylogo: require('./assets/images/nightowl.png').default,
+    companylogo: require('./assets/images/infosys.png').default,
     date: 'Oct 2021 – Present',
     desc:'',
       descBullets: [
@@ -312,7 +312,7 @@ const bigProjects = {
   subtitle: 'SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH',
   projects: [
     {
-      image: require('./assets/images/gulogo.png').default,
+      image: require('./assets/images/tfb.jpeg').default,
       projectName: "TheFlyingBasket",
       projectDesc: "It is an online portal where you can get Affordable Chemical Free Fruits , Vegetables , All Grocery items and Personal care in best price at your door step. You can select and purchase a wide variety of fruits and vegetables merely sitting at home. ",
      
@@ -320,21 +320,21 @@ const bigProjects = {
         {
           name: 'Visit Website',
           url:
-            'http://theflyingbasket.com/',
+            'https://www.facebook.com/theflyingbasket',
         },
         //  you can add extra buttons here.
       ],
     },
     
     {
-      image: require('./assets/images/nextuLogo.webp').default,
+      image: require('./assets/images/mirai.webp').default,
       projectName: "Mirai Vizion",
       projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
       footerLink: [
         {
           name: 'Visit Mirai Vizion',
           url:
-            'http://miraivizion.com/',
+            'https://www.miraivizion.com/',
         },
       ],
     },
@@ -369,7 +369,7 @@ const achievementSection = {
       title: 'Bronze Medalist',
       subtitle:
         'Received Bronze Medal and Certificate for the Academic excellence performace in my B.Tech CSE Graduation.',
-      image: require('./assets/images/gulogo.png').default,
+      image: require('./assets/images/medal.jpg').default,
       footerLink: [
         {
           name: 'View Medal',
