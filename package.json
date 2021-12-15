@@ -16,7 +16,8 @@
     "react-lottie": "^1.2.3",
     "react-reveal": "^1.2.2",
     "react-scripts": "^4.0.3",
-    "react-twitter-embed": "3.0.3"
+    "react-twitter-embed": "3.0.3",
+    "simple-icons": "^6.0.0"
   },
   "scripts": {
     "predeploy": "npm run build",

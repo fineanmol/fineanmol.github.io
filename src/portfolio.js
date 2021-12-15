@@ -7,17 +7,18 @@ import emoji from 'react-easy-emoji';
 
 
 const illustration = {
-  animated: true, // set to false to use static SVG
+  animated: false, // set to false to use static SVG
 };
 
 const greeting = {
   username: 'Anmol Agarwal',
   title: "Hi all, I'm Anmol",
   subTitle: emoji(
-    'A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with Android / JavaScript / Reactjs / Nodejs / Flutter and some other cool libraries and frameworks.'
+    'A passionate individual who always thrive to work on end to end products 🚀 which develop sustainable and scalable social and technical systems to create impact.  '
   ),
   resumeLink:
     'https://drive.google.com/file/d/1vNMuEYdWEqdLh8QzdeT7ef7_6_UCx231/view?usp=sharingg',
+    repoLink:'https://github.com/fineanmol/fineanmol.github.io',
   displayGreeting: true, // Set false to hide this section, defaults to true
 };
 
@@ -46,10 +47,13 @@ const skillsSection = {
     emoji(
       '⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications'
     ),
-    emoji('⚡ Progressive Web Applications in Android Stacks'),
+    emoji('⚡Developing Mobile applications using Flutter, Kotlin and Java'),
     emoji(
       '⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean'
-    ),
+    ),emoji('⚡ Experience working on multiple cloud platforms'),
+    emoji('⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases'),
+    emoji("⚡ Deploying deep learning models on cloud to use on mobile devices"),
+    emoji("⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS"),
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -57,11 +61,11 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: 'html-5',
+      skillName: 'Html-5',
       fontAwesomeClassname: 'fab fa-html5',
     },
     {
-      skillName: 'css3',
+      skillName: 'CSS3',
       fontAwesomeClassname: 'fab fa-css3-alt',
     },
     {
@@ -71,25 +75,27 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: 'JavaScript',
       fontAwesomeClassname: 'fab fa-js',
+      style: {
+        hover: "#F7DF1E",
+      },
     },
     {
-      skillName: 'reactjs',
+      skillName: 'ReactjS',
       fontAwesomeClassname: 'fab fa-react',
+    
     },
     {
-      skillName: 'nodejs',
+      skillName: 'NodejS',
       fontAwesomeClassname: 'fab fa-node',
+      
     },
+    
     {
-      skillName: 'swift',
-      fontAwesomeClassname: 'fab fa-swift',
-    },
-    {
-      skillName: 'npm',
+      skillName: 'NPM',
       fontAwesomeClassname: 'fab fa-npm',
     },
     {
-      skillName: 'sql-database',
+      skillName: 'SQL-database',
       fontAwesomeClassname: 'fas fa-database',
     },
     {
@@ -97,11 +103,87 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: 'fab fa-android',
     },
     {
-      skillName: 'aws',
+      skillName: 'AWS',
       fontAwesomeClassname: 'fab fa-aws',
     },
     {
-      skillName: 'firebase',
+      skillName: 'Firebase',
+      fontAwesomeClassname: 'fas fa-fire',
+    },
+    {
+      skillName: 'Python',
+      fontAwesomeClassname: 'fab fa-python',
+    },
+    {
+      skillName: 'docker',
+      fontAwesomeClassname: 'fab fa-docker',
+    },
+  ],
+  display: true, // Set false to hide this section, defaults to true
+};
+
+const fullStackSection = {
+  title: 'What I do',
+  subTitle: 'CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK',
+  skills: [
+    emoji('⚡ Experience working on multiple cloud platforms'),
+    emoji('⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases'),
+    emoji("⚡ Deploying deep learning models on cloud to use on mobile devices"),
+    emoji("⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS"),
+  ],
+
+  /* Make Sure to include correct Font Awesome Classname to view your icon
+https://fontawesome.com/icons?d=gallery */
+
+  softwareSkills: [
+    {
+      skillName: 'Html-5',
+      fontAwesomeClassname: 'fab fa-html5',
+    },
+    {
+      skillName: 'CSS3',
+      fontAwesomeClassname: 'fab fa-css3-alt',
+    },
+    {
+      skillName: 'sass',
+      fontAwesomeClassname: 'fab fa-sass',
+    },
+    {
+      skillName: 'JavaScript',
+      fontAwesomeClassname: 'fab fa-js',
+      style: {
+        hover: "#F7DF1E",
+      },
+    },
+    {
+      skillName: 'ReactjS',
+      fontAwesomeClassname: 'fab fa-react',
+    
+    },
+    {
+      skillName: 'NodejS',
+      fontAwesomeClassname: 'fab fa-node',
+      
+    },
+    
+    {
+      skillName: 'NPM',
+      fontAwesomeClassname: 'fab fa-npm',
+    },
+    {
+      skillName: 'SQL-database',
+      fontAwesomeClassname: 'fas fa-database',
+    },
+    {
+      skillName: 'Android',
+      fontAwesomeClassname: 'fab fa-android',
+    },
+    {
+      skillName: 'AWS',
+      fontAwesomeClassname: 'fab fa-aws',
+    },
+    {
+      skillName: 'Firebase',
       fontAwesomeClassname: 'fas fa-fire',
     },
     {
@@ -162,7 +244,7 @@ const techStack = {
       progressPercentage: '95%',
     },
   ],
-  displayCodersrank: true, // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false, // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
 
 // Work experience section
