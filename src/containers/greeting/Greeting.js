@@ -46,15 +46,25 @@ export default function Greeting() {
                   href={greeting.resumeLink}
                 />
               </div>
+              
             </div>
+            <div className="button-greeting">
+                
+                <Button 
+                  text="⭐ Star Me On Github "
+                  newTab={true}
+                  href={greeting.repoLink}
+                />
+              </div>
           </div>
+         
           <div className="greeting-image-div">
             {illustration.animated ? (
               <DisplayLottie animationData={landingPerson} />
             ) : (
-              <img
+              <img src={require('../../assets/images/manOnTable.svg')}
                 alt="man sitting on table"
-                src={require('../../assets/images/manOnTable.svg')}
+                
               ></img>
             )}
           </div>

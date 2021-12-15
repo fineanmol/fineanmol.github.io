@@ -5,6 +5,7 @@
 import emoji from 'react-easy-emoji';
 
 
+
 const illustration = {
   animated: true, // set to false to use static SVG
 };
@@ -13,10 +14,11 @@ const greeting = {
   username: 'Anmol Agarwal',
   title: "Hi all, I'm Anmol",
   subTitle: emoji(
-    'A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with Android / JavaScript / Reactjs / Nodejs / Flutter and some other cool libraries and frameworks.'
+    'A passionate individual who always thrive to work on end to end products 🚀 which develop sustainable and scalable social and technical systems to create impact.  '
   ),
   resumeLink:
     'https://drive.google.com/file/d/1vNMuEYdWEqdLh8QzdeT7ef7_6_UCx231/view?usp=sharingg',
+    repoLink:'https://github.com/fineanmol/fineanmol.github.io',
   displayGreeting: true, // Set false to hide this section, defaults to true
 };
 
@@ -45,10 +47,13 @@ const skillsSection = {
     emoji(
       '⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications'
     ),
-    emoji('⚡ Progressive Web Applications in Android Stacks'),
+    emoji('⚡Developing Mobile applications using Flutter, Kotlin and Java'),
     emoji(
       '⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean'
-    ),
+    ),emoji('⚡ Experience working on multiple cloud platforms'),
+    emoji('⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases'),
+    emoji("⚡ Deploying deep learning models on cloud to use on mobile devices"),
+    emoji("⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS"),
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -56,11 +61,11 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: 'html-5',
+      skillName: 'Html-5',
       fontAwesomeClassname: 'fab fa-html5',
     },
     {
-      skillName: 'css3',
+      skillName: 'CSS3',
       fontAwesomeClassname: 'fab fa-css3-alt',
     },
     {
@@ -70,25 +75,27 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: 'JavaScript',
       fontAwesomeClassname: 'fab fa-js',
+      style: {
+        hover: "#F7DF1E",
+      },
     },
     {
-      skillName: 'reactjs',
+      skillName: 'ReactjS',
       fontAwesomeClassname: 'fab fa-react',
+    
     },
     {
-      skillName: 'nodejs',
+      skillName: 'NodejS',
       fontAwesomeClassname: 'fab fa-node',
+      
     },
+    
     {
-      skillName: 'swift',
-      fontAwesomeClassname: 'fab fa-swift',
-    },
-    {
-      skillName: 'npm',
+      skillName: 'NPM',
       fontAwesomeClassname: 'fab fa-npm',
     },
     {
-      skillName: 'sql-database',
+      skillName: 'SQL-database',
       fontAwesomeClassname: 'fas fa-database',
     },
     {
@@ -96,11 +103,87 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: 'fab fa-android',
     },
     {
-      skillName: 'aws',
+      skillName: 'AWS',
       fontAwesomeClassname: 'fab fa-aws',
     },
     {
-      skillName: 'firebase',
+      skillName: 'Firebase',
+      fontAwesomeClassname: 'fas fa-fire',
+    },
+    {
+      skillName: 'Python',
+      fontAwesomeClassname: 'fab fa-python',
+    },
+    {
+      skillName: 'docker',
+      fontAwesomeClassname: 'fab fa-docker',
+    },
+  ],
+  display: true, // Set false to hide this section, defaults to true
+};
+
+const fullStackSection = {
+  title: 'What I do',
+  subTitle: 'CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK',
+  skills: [
+    emoji('⚡ Experience working on multiple cloud platforms'),
+    emoji('⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases'),
+    emoji("⚡ Deploying deep learning models on cloud to use on mobile devices"),
+    emoji("⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS"),
+  ],
+
+  /* Make Sure to include correct Font Awesome Classname to view your icon
+https://fontawesome.com/icons?d=gallery */
+
+  softwareSkills: [
+    {
+      skillName: 'Html-5',
+      fontAwesomeClassname: 'fab fa-html5',
+    },
+    {
+      skillName: 'CSS3',
+      fontAwesomeClassname: 'fab fa-css3-alt',
+    },
+    {
+      skillName: 'sass',
+      fontAwesomeClassname: 'fab fa-sass',
+    },
+    {
+      skillName: 'JavaScript',
+      fontAwesomeClassname: 'fab fa-js',
+      style: {
+        hover: "#F7DF1E",
+      },
+    },
+    {
+      skillName: 'ReactjS',
+      fontAwesomeClassname: 'fab fa-react',
+    
+    },
+    {
+      skillName: 'NodejS',
+      fontAwesomeClassname: 'fab fa-node',
+      
+    },
+    
+    {
+      skillName: 'NPM',
+      fontAwesomeClassname: 'fab fa-npm',
+    },
+    {
+      skillName: 'SQL-database',
+      fontAwesomeClassname: 'fas fa-database',
+    },
+    {
+      skillName: 'Android',
+      fontAwesomeClassname: 'fab fa-android',
+    },
+    {
+      skillName: 'AWS',
+      fontAwesomeClassname: 'fab fa-aws',
+    },
+    {
+      skillName: 'Firebase',
       fontAwesomeClassname: 'fas fa-fire',
     },
     {
@@ -122,18 +205,18 @@ const educationInfo = {
   schools: [
     {
       schoolName: 'Galgotias University',
-      logo:require('./assets/images/gulogo.png'),
-      subHeader: 'Bachelor of Technology in Computer Science',
+      logo: require("./assets/images/airbnbLogo.png"),
+      subHeader: emoji('Bachelor of Technology in Computer Science (🥉 Medalist)'),
       duration: 'September 2015 - August 2019',
       desc: '',
       descBullets: ['Participated in the Research of Advanced Threat Detection System and organized 2 hackathons.\n ',
-        'Ranked top 1% in the graduation program #Medalist',
+        emoji('Ranked top 1% in the graduation program #Medalist🥉'),
         'Took courses about Software Engineering, Web Security, Operating Systems, ...',
       ],
     },
     {
       schoolName: 'Saraswati Vidya Mandir',
-      logo: require('./assets/images/stanfordLogo.png'),
+      logo:require('./assets/images/gulogo.png'),
       subHeader: 'Senior Secondary School',
       duration: 'March 2014 - April 2015',
       desc:
@@ -252,6 +335,30 @@ const bigProjects = {
         },
       ],
     },
+    {
+      image: require('./assets/images/nextuLogo.webp'),
+      projectName: "Mirai Vizion",
+      projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
+      footerLink: [
+        {
+          name: 'Visit Mirai Vizion',
+          url:
+            'http://miraivision.com/',
+        },
+      ],
+    },
+    {
+      image: require('./assets/images/nextuLogo.webp'),
+      projectName: "Mirai Vizion",
+      projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
+      footerLink: [
+        {
+          name: 'Visit Mirai Vizion',
+          url:
+            'http://miraivision.com/',
+        },
+      ],
+    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
@@ -344,6 +451,30 @@ const blogSection = {
       description:
         'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
     },
+    {
+      url: 'http://instagram.com/fineanmol/',
+      title: 'Why REACT is The Best?',
+      description:
+        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
+    },
+    {
+      url: 'http://instagram.com/fineanmol/',
+      title: 'Why REACT is The Best?',
+      description:
+        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
+    },
+    {
+      url: 'http://instagram.com/fineanmol/',
+      title: 'Why REACT is The Best?',
+      description:
+        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
+    },
+    {
+      url: 'http://instagram.com/fineanmol/',
+      title: 'Why REACT is The Best?',
+      description:
+        'React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.',
+    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
@@ -364,7 +495,7 @@ const talkSection = {
       event_url: 'https://www.facebook.com/events/2339906106275053/',
     },
   ],
-  display: false, // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -377,7 +508,7 @@ const podcastSection = {
   podcast: [
    // 'https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo',
   ],
-  display: false, // Set false to hide this section, defaults to true
+  display: true, // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
