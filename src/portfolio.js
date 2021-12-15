@@ -205,7 +205,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: 'Galgotias University',
-      logo: require("./assets/images/airbnbLogo.png"),
+      logo: require("./assets/images/airbnbLogo.png").default,
       subHeader: emoji('Bachelor of Technology in Computer Science (🥉 Medalist)'),
       duration: 'September 2015 - August 2019',
       desc: '',
@@ -216,7 +216,7 @@ const educationInfo = {
     },
     {
       schoolName: 'Saraswati Vidya Mandir',
-      logo:require('./assets/images/gulogo.png'),
+      logo:require('./assets/images/gulogo.png').default,
       subHeader: 'Senior Secondary School',
       duration: 'March 2014 - April 2015',
       desc:
@@ -255,7 +255,7 @@ const workExperiences = {
     {
     role: 'Founder @NightOwlDevelopers',
     company: 'NightOwlDevelopers',
-    companylogo: require('./assets/images/nightowl.png'),
+    companylogo: require('./assets/images/nightowl.png').default,
     date: 'Jan 2018 – Present',
     desc:'',
       descBullets: [
@@ -266,7 +266,7 @@ const workExperiences = {
     {
       role: 'Software Engineer',
       company: 'Infosys Ltd',
-      companylogo: require('./assets/images/infosys.png'),
+      companylogo: require('./assets/images/infosys.png').default,
       date: 'September 2019 – Present',
       // desc:
       //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -280,7 +280,7 @@ const workExperiences = {
     {
       role: 'SDE @Intern',
       company: 'Infosys Ltd',
-      companylogo: require('./assets/images/infosys.png'),
+      companylogo: require('./assets/images/infosys.png').default,
       date: 'Jan 2019 – May 2019',
      // desc:'',
      descBullets: [
@@ -310,7 +310,7 @@ const bigProjects = {
   subtitle: 'SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH',
   projects: [
     {
-      image: require('./assets/images/gulogo.png'),
+      image: require('./assets/images/gulogo.png').default,
       projectName: "TheFlyingBasket.com",
       projectDesc: "It is an online portal where you can get Affordable Chemical Free Fruits , Vegetables , All Grocery items and Personal care in best price at your door step. You can select and purchase a wide variety of fruits and vegetables merely sitting at home. ",
      
@@ -324,7 +324,7 @@ const bigProjects = {
       ],
     },
     {
-      image: require('./assets/images/nextuLogo.webp'),
+      image: require('./assets/images/nextuLogo.webp').default,
       projectName: "Mirai Vizion",
       projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
       footerLink: [
@@ -336,7 +336,7 @@ const bigProjects = {
       ],
     },
     {
-      image: require('./assets/images/nextuLogo.webp'),
+      image: require('./assets/images/nextuLogo.webp').default,
       projectName: "Mirai Vizion",
       projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
       footerLink: [
@@ -348,7 +348,7 @@ const bigProjects = {
       ],
     },
     {
-      image: require('./assets/images/nextuLogo.webp'),
+      image: require('./assets/images/nextuLogo.webp').default,
       projectName: "Mirai Vizion",
       projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
       footerLink: [
@@ -376,7 +376,7 @@ const achievementSection = {
       title: 'Google SWE Internship 2021',
       subtitle:
         'Selected as Google SWE 2021 Intern from 40000 students from 77 different countries.',
-      image: require('./assets/images/google.png'),
+      image: require('./assets/images/google.png').default,
       footerLink: [
         {
           name: 'Certification',
@@ -399,7 +399,7 @@ const achievementSection = {
       title: 'Bronze Medalist',
       subtitle:
         'Received Bronze Medal and Certificate for the Academic excellence performace in my B.Tech CSE Graduation.',
-      image: require('./assets/images/gulogo.png'),
+      image: require('./assets/images/gulogo.png').default,
       footerLink: [
         {
           name: 'View Medal',
@@ -417,7 +417,7 @@ const achievementSection = {
     {
       title: 'PWA Web App Developer',
       subtitle: 'Completed Certifcation from SMIT for PWA Web App Development',
-      image: require('./assets/images/pwaLogo.webp'),
+      image: require('./assets/images/pwaLogo.webp').default,
       footerLink: [
         { name: 'Certification', url: '' },
         {
