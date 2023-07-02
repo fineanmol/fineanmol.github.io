@@ -41,10 +41,10 @@ export default class Main extends Component {
         <StyleProvider
           value={{ isDark: this.state.isDark, changeTheme: this.changeTheme }}
         >
-           <Header />
-         <Greeting />
+          <Header />
+          <Greeting />
           <Skills />
-          <StackProgress /> 
+          <StackProgress />
           <Education />
           <WorkExperience />
           <Projects />
