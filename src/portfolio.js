@@ -28,13 +28,11 @@ const socialMediaLinks = {
   github: 'https://github.com/fineanmol',
   linkedin: 'https://www.linkedin.com/in/fineanmol/',
   gmail: 'anmol.agarwal2004@yahoo.com',
- // gitlab: 'https://gitlab.com/fineanmol',
-  facebook: 'https://www.facebook.com/fineanmol',
-  twitter: 'https://twitter.com/fineanmol',
+  // facebook: 'https://www.facebook.com/fineanmol',
+  // twitter: 'https://twitter.com/fineanmol',
   instagram: 'http://instagram.com/fineanmol',
-  //medium: 'https://medium.com/@fineanmol',
-  // stackoverflow: 'https://stackoverflow.com/users/10422806/fineanmola',
-  // Instagram and Twitter are also supported in the links!
+  //medium: '',
+  // stackoverflow: '',
   display: true, // Set true to display this section, defaults to false
 };
 
@@ -45,15 +43,14 @@ const skillsSection = {
   subTitle: 'CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK',
   skills: [
     emoji(
-      '⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications'
+      '⚡ Develop interactive front-end/UI for web and mobile apps'
     ),
-    emoji('⚡Developing Mobile applications using Flutter, Kotlin and Java'),
-    emoji(
-      '⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean'
-    ),emoji('⚡ Experience working on multiple cloud platforms'),
-    emoji('⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases'),
-    emoji("⚡ Deploying deep learning models on cloud to use on mobile devices"),
-    emoji("⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS"),
+    emoji('⚡ Mobile app development using JavaScript, Kotlin, and Java'),
+    emoji('⚡ Integration of third-party services (Firebase, AWS, Digital Ocean)'),
+    emoji('⚡ Experience with multiple cloud platforms'),
+    emoji("⚡ Hosting and maintaining websites on virtual machines with database integration"),
+    emoji('⚡ Deploying deep learning models on the cloud for mobile devices'),
+    emoji("⚡ Setting up streaming jobs between DB and server on GCP and AWS"),
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -209,9 +206,9 @@ const educationInfo = {
       subHeader: emoji('Bachelor of Technology in Computer Science (🥉 Medalist)'),
       duration: 'September 2015 - August 2019',
       desc: '',
-      descBullets: ['Participated in the Research of Advanced Threat Detection System and organized 2 hackathons.\n ',
-        emoji('Ranked top 1% in the graduation program #Medalist🥉'),
-        'Took courses about Software Engineering, Web Security, Operating Systems, ...',
+      descBullets: ['Participated in the Research of Advanced Threat Detection System and organized 2 hackathons..\n ',
+        emoji('Ranked in the top 1% of the graduation program, earning the #Medalist🥉 distinction.'),
+        'Completed courses on Software Engineering, Web Security, and Operating Systems, among others..',
       ],
     },
     {
@@ -255,14 +252,15 @@ const workExperiences = {
     {
     role: 'Software Engineer II',
     company: 'Shaadi.com',
-    companylogo: require('./assets/images/infosys.png'),
+    companylogo: require('./assets/images/Shaadi.png'),
     date: 'March 2022 – Present',
     desc:'',
       descBullets: [
-       
-        'I have been Building robust System for ALSTOM, a French Multinational Fleet manufacturer(France-Europe Metro Fleets).',
-        'As a part of UI development team, helped in migration of legacy code to React which solved 90% of UX issues. ',
-        'I have done collaborations across multiple teams to ensure proper deployment of all components thus providing a GitLab pipeline of high efficiency..✨',
+
+        'Migrated legacy code to enhanced rich Typescript with React Js and NextJS framework.',
+        'Experienced with React.js state management workflows (such as Flux, Redux, or Context API), React Hooks, and developed custom hooks.',
+        'Created more user-friendly features - helped to get more engaging users as per the analysis of the product.',
+        'Prototyped creative solutions quickly, and able to collaborate with others in crafting and implementing the technical vision.'
       ],
   },
     {
@@ -272,13 +270,11 @@ const workExperiences = {
     date: 'September 2019 – March 2022',
     desc:'',
       descBullets: [
-       
-        'I have been Building robust System for ALSTOM, a French Multinational Fleet manufacturer(France-Europe Metro Fleets).',
-        'As a part of UI development team, helped in migration of legacy code to React which solved 90% of UX issues. ',
-        'I have done collaborations across multiple teams to ensure proper deployment of all components thus providing a GitLab pipeline of high efficiency..✨',
-        ' Worked in Novartis Project, a US leading Pharmaceutical company.',
-'Tool and Technologies: .Net, C#, MS SQL, Python, Android with Kotlin, GIT Hub, Atom, Beyond Compare, Visual Studio Code Deploy',
-       
+
+        'Worked in agile environment with weekly stand-up, kept track of user stories/bugs in projects.',
+        'Pair programmed with 3 engineers, and reviewed teams code to provide additional perspective and catch previously missed errors & Eslint issues.',
+        'Learned front-end object-oriented programming to develop client & server side systems.',
+        'Identified and implemented dynamic web solutions in accordance to company standards.',
       ],
   },
     
@@ -369,9 +365,26 @@ const achievementSection = {
   achievementsCards: [
     
     {
-      title: 'Bronze Medalist',
+      title: 'Rockstar of the Month Medalist',
       subtitle:
-        'Received Bronze Medal and Certificate for the Academic excellence performace in my B.Tech CSE Graduation.',
+        'Become Rockstar of the Month for exceptional code quality maintenance and record-breaking resolution of 50+ bugs.',
+      image: require('./assets/images/Rockstar.png'),
+      footerLink: [
+        {
+          name: 'Nomination',
+          url:
+            'https://media.licdn.com/dms/image/C4D2DAQHEFonWBeVq4A/profile-treasury-image-shrink_1920_1920/0/1676985317978?e=1688911200&v=beta&t=eOD8IoC_NJUtgSbYY1XZk_25fIde6pzRNyXMIKHxVv0',
+        },
+        {
+          name: 'View Rockstar Certificate',
+          url:
+            'https://drive.google.com/file/d/1ikrDTDqTSy7O6Tld0Eyb2paJxMLN5NS7/view?usp=sharing',
+        }, 
+      ],
+    },
+    {
+      title: 'Bronze Medalist',
+      subtitle:'Awarded the Bronze Medal and Certificate in recognition of outstanding academic performance during my B.Tech CSE graduation.',
       image: require('./assets/images/medal.jpg'),
       footerLink: [
         {
@@ -380,7 +393,7 @@ const achievementSection = {
             'https://www.linkedin.com/posts/fineanmol_medal-academicexcellence-medalist-activity-6744668235779645440-f-5i',
         },
         {
-          name: 'View Medal Cerificate',
+          name: 'View Medal Certificate',
           url:
             'https://drive.google.com/file/d/1GFkMfo0ry98NWunm0Zw4QXZ7kRyR1-2x/view?usp=sharing',
         }, 
@@ -389,7 +402,7 @@ const achievementSection = {
 
     {
       title: 'Digital Ocean OpenSource Contributor',
-      subtitle: 'Won Prizes on HacktoberFest Event ',
+      subtitle: 'Consistently recognized with award prizes for participation in the HacktoberFest event by DigitalOcean from 2019 to 2022.',
       image: require('./assets/images/digitalocean.png'),
       footerLink: [
         { name: 'Swags', url: 'https://www.linkedin.com/posts/fineanmol_hacktoberfest-hacktoberfest2020-opensource-activity-6769234540062916608-ih0S' },
@@ -401,7 +414,7 @@ const achievementSection = {
     },
     {
       title: 'IBM Quantum Business Badge',
-      subtitle: 'Won Prizes on HacktoberFest Event ',
+      subtitle: 'Quantum Business Badge recipient in leveraging quantum computing technology for innovative business solutions.',
       image: require('./assets/images/ibm.png'),
       footerLink: [
         { name: 'Rewards', url: 'https://www.linkedin.com/posts/fineanmol_infosys-ibm-ibmquantum-activity-6789256112379105280-GtqI' },
@@ -504,7 +517,7 @@ const contactInfo = {
 
 const twitterDetails = {
   userName: 'fineanmol', //Replace "twitter" with your twitter username without @
-  display: true, // Set true to display this section, defaults to false
+  display: false, // Set true to display this section, defaults to false
 };
 
 export {
