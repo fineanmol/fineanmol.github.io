@@ -205,7 +205,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: 'Galgotias University',
-      logo: require("./assets/images/gulogo.png").default,
+      logo: require("./assets/images/gulogo.png"),
       subHeader: emoji('Bachelor of Technology in Computer Science (🥉 Medalist)'),
       duration: 'September 2015 - August 2019',
       desc: '',
@@ -216,7 +216,7 @@ const educationInfo = {
     },
     {
       schoolName: 'Saraswati Vidya Mandir',
-      logo:require('./assets/images/school.jpg').default,
+      logo:require('./assets/images/school.jpg'),
       subHeader: 'Senior Secondary School',
       duration: 'March 2014 - April 2015',
       desc:
@@ -253,10 +253,10 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-    role: 'Senior Systems Engineer',
-    company: 'Infosys Ltd.',
-    companylogo: require('./assets/images/infosys.png').default,
-    date: 'Oct 2021 – Present',
+    role: 'Software Engineer II',
+    company: 'Shaadi.com',
+    companylogo: require('./assets/images/infosys.png'),
+    date: 'March 2022 – Present',
     desc:'',
       descBullets: [
        
@@ -266,23 +266,26 @@ const workExperiences = {
       ],
   },
     {
-      role: 'Software Engineer',
-      company: 'Infosys Ltd',
-      companylogo: require('./assets/images/infosys.png').default,
-      date: 'September 2019 – September 2021',
-      // desc:
-      //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    role: 'Senior Systems Engineer',
+    company: 'Infosys Ltd.',
+    companylogo: require('./assets/images/infosys.png'),
+    date: 'September 2019 – March 2022',
+    desc:'',
       descBullets: [
+       
+        'I have been Building robust System for ALSTOM, a French Multinational Fleet manufacturer(France-Europe Metro Fleets).',
+        'As a part of UI development team, helped in migration of legacy code to React which solved 90% of UX issues. ',
+        'I have done collaborations across multiple teams to ensure proper deployment of all components thus providing a GitLab pipeline of high efficiency..✨',
         ' Worked in Novartis Project, a US leading Pharmaceutical company.',
 'Tool and Technologies: .Net, C#, MS SQL, Python, Android with Kotlin, GIT Hub, Atom, Beyond Compare, Visual Studio Code Deploy',
        
-       
       ],
-    },
+  },
+    
     {
       role: 'SDE @Intern',
       company: 'Infosys Ltd',
-      companylogo: require('./assets/images/infosys.png').default,
+      companylogo: require('./assets/images/infosys.png'),
       date: 'Jan 2019 – May 2019',
      // desc:'',
      descBullets: [
@@ -312,7 +315,7 @@ const bigProjects = {
   subtitle: 'SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH',
   projects: [
     {
-      image: require('./assets/images/tfb.jpeg').default,
+      image: require('./assets/images/tfb.jpeg'),
       projectName: "TheFlyingBasket",
       projectDesc: "It is an online portal where you can get Affordable Chemical Free Fruits , Vegetables , All Grocery items and Personal care in best price at your door step. You can select and purchase a wide variety of fruits and vegetables merely sitting at home. ",
      
@@ -327,19 +330,19 @@ const bigProjects = {
     },
     
     {
-      image: require('./assets/images/mirai.webp').default,
+      image: require('./assets/images/mirai.webp'),
       projectName: "Mirai Vizion",
       projectDesc: "An AI-based product that helps the customer to advertise their products in no time. It Isn't great not only in cities, states, but you can also advertise your products in countries with this tech.",
       footerLink: [
         {
           name: 'Visit Mirai Vizion',
           url:
-            'https://www.miraivizion.com/',
+            'https://mirai-vizion.vercel.app/',
         },
       ],
     },
     {
-      image: require('./assets/images/hindcon.png').default,
+      image: require('./assets/images/hindcon.png'),
       projectName: "Hindcon.com",
       projectDesc: "It is an online portal where you can get Affordable Chemicals for your home and Factory plant in best price at your door step. You can select and purchase a wide variety of waterproofing and repair servicing chemicals merely sitting at home. ",
      footerLink: [
@@ -369,7 +372,7 @@ const achievementSection = {
       title: 'Bronze Medalist',
       subtitle:
         'Received Bronze Medal and Certificate for the Academic excellence performace in my B.Tech CSE Graduation.',
-      image: require('./assets/images/medal.jpg').default,
+      image: require('./assets/images/medal.jpg'),
       footerLink: [
         {
           name: 'View Medal',
@@ -387,7 +390,7 @@ const achievementSection = {
     {
       title: 'Digital Ocean OpenSource Contributor',
       subtitle: 'Won Prizes on HacktoberFest Event ',
-      image: require('./assets/images/digitalocean.png').default,
+      image: require('./assets/images/digitalocean.png'),
       footerLink: [
         { name: 'Swags', url: 'https://www.linkedin.com/posts/fineanmol_hacktoberfest-hacktoberfest2020-opensource-activity-6769234540062916608-ih0S' },
         {
@@ -399,7 +402,7 @@ const achievementSection = {
     {
       title: 'IBM Quantum Business Badge',
       subtitle: 'Won Prizes on HacktoberFest Event ',
-      image: require('./assets/images/ibm.png').default,
+      image: require('./assets/images/ibm.png'),
       footerLink: [
         { name: 'Rewards', url: 'https://www.linkedin.com/posts/fineanmol_infosys-ibm-ibmquantum-activity-6789256112379105280-GtqI' },
         {
