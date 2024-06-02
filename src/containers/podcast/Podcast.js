@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import "./Podcast.css";
 import { podcastSection } from "../../portfolio";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Podcast() {
   const { isDark } = useContext(StyleContext);
+
   if (!podcastSection.display) {
     return null;
   }
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main">
@@ -25,12 +27,11 @@ export default function Podcast() {
           </p>
         </div>
         <div className="podcast-main-div">
-          {podcastSection.podcast.map((podcastLink,i) => {
+          {podcastSection.podcast.map((podcastLink, i) => {
             return (
-              <div
-                key={i}
-              >
+              <div key={i}>
                 <iframe
+                  title={`Podcast ${i + 1}`}
                   className="podcast"
                   src={podcastLink}
                   frameBorder="0"

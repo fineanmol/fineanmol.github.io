@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './Skills.css';
 import SoftwareSkill from '../../components/softwareSkills/SoftwareSkill';
 import { illustration, skillsSection } from '../../portfolio';
-import { Fade } from 'react-reveal';
+import { Fade } from 'react-awesome-reveal';
 import codingPerson from '../../assets/lottie/codingPerson';
 import DisplayLottie from '../../components/displayLottie/DisplayLottie';
 import StyleContext from '../../contexts/StyleContext';

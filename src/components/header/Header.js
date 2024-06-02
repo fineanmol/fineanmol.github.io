@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import Headroom from 'react-headroom';
-import './Header.css';
-import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
-import StyleContext from '../../contexts/StyleContext';
+import React, { useContext } from "react";
+import Headroom from "react-headroom";
+import "./Header.css";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import StyleContext from "../../contexts/StyleContext";
 import {
   greeting,
   workExperiences,
@@ -11,7 +11,7 @@ import {
   blogSection,
   talkSection,
   achievementSection,
-} from '../../portfolio';
+} from "../../portfolio";
 
 function Header() {
   const { isDark } = useContext(StyleContext);
@@ -24,8 +24,8 @@ function Header() {
 
   return (
     <Headroom>
-      <header className={isDark ? 'dark-menu header' : 'header'}>
-        <a href="" className="logo">
+      <header className={isDark ? "dark-menu header" : "header"}>
+        <a href className="logo">
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
@@ -34,11 +34,11 @@ function Header() {
         <label
           className="menu-icon"
           htmlFor="menu-btn"
-          style={{ color: 'white' }}
+          style={{ color: "white" }}
         >
-          <span className={isDark ? 'navicon navicon-dark' : 'navicon'}></span>
+          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
-        <ul className={isDark ? 'dark-menu menu' : 'menu'}>
+        <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
               <a href="#skills">Skills</a>
@@ -73,7 +73,7 @@ function Header() {
             <a href="#contact">Contact Me</a>
           </li>
           <li>
-            <a>
+            <a href="#home">
               <ToggleSwitch />
             </a>
           </li>
@@ -82,4 +82,5 @@ function Header() {
     </Headroom>
   );
 }
+
 export default Header;

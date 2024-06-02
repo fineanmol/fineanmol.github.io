@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import "./Contact.css";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { illustration, contactInfo } from "../../portfolio";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Contact() {
   const { isDark } = useContext(StyleContext);
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main contact-margin-top" id="contact">
@@ -29,14 +30,14 @@ export default function Contact() {
                 isDark ? "dark-mode contact-text-div" : "contact-text-div"
               }
             >
-              <a className="contact-detail" href={"tel:" + contactInfo.number}>
+              <a className="contact-detail" href={`tel:${contactInfo.number}`}>
                 {contactInfo.number}
               </a>
               <br />
               <br />
               <a
                 className="contact-detail-email"
-                href={"mailto:" + contactInfo.email_address}
+                href={`mailto:${contactInfo.email_address}`}
               >
                 {contactInfo.email_address}
               </a>
@@ -45,7 +46,7 @@ export default function Contact() {
               <SocialMedia />
             </div>
           </div>
-          <a href={"mailto:" + "anmol.agarwal2004@yahoo.com"}>
+          <a href={`mailto:${contactInfo.email_address}`}>
             <div className="contact-image-div">
               {illustration.animated ? (
                 <DisplayLottie animationData={email} />
