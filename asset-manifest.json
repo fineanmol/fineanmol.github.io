@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.2463ddcc.css",
-    "main.js": "/static/js/main.bdaa1cd7.js",
-    "static/css/791.615d9f50.chunk.css": "/static/css/791.615d9f50.chunk.css",
-    "static/js/791.a3f26884.chunk.js": "/static/js/791.a3f26884.chunk.js",
+    "main.css": "/static/css/main.c64ba5a6.css",
+    "main.js": "/static/js/main.d8503672.js",
+    "static/css/791.8c5ad9ad.chunk.css": "/static/css/791.8c5ad9ad.chunk.css",
+    "static/js/791.06d92fc1.chunk.js": "/static/js/791.06d92fc1.chunk.js",
     "static/css/430.6cd31d9f.chunk.css": "/static/css/430.6cd31d9f.chunk.css",
     "static/js/430.b89d6f0a.chunk.js": "/static/js/430.b89d6f0a.chunk.js",
     "static/media/Rockstar.png": "/static/media/Rockstar.6da60e25bb390b83c9cb.png",
@@ -21,19 +21,20 @@
     "static/media/contactMailDark.svg": "/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
     "static/media/developerActivity.svg": "/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
     "static/media/ibm.png": "/static/media/ibm.133758c7bcbe8ef65042.png",
+    "static/media/IU_logo.png": "/static/media/IU_logo.099ddbb167758f5563db.png",
     "static/media/skill.svg": "/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
     "static/media/mirai.webp": "/static/media/mirai.f47d0b79ff55a13ee31f.webp",
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.2463ddcc.css.map": "/static/css/main.2463ddcc.css.map",
-    "main.bdaa1cd7.js.map": "/static/js/main.bdaa1cd7.js.map",
-    "791.615d9f50.chunk.css.map": "/static/css/791.615d9f50.chunk.css.map",
-    "791.a3f26884.chunk.js.map": "/static/js/791.a3f26884.chunk.js.map",
+    "main.c64ba5a6.css.map": "/static/css/main.c64ba5a6.css.map",
+    "main.d8503672.js.map": "/static/js/main.d8503672.js.map",
+    "791.8c5ad9ad.chunk.css.map": "/static/css/791.8c5ad9ad.chunk.css.map",
+    "791.06d92fc1.chunk.js.map": "/static/js/791.06d92fc1.chunk.js.map",
     "430.6cd31d9f.chunk.css.map": "/static/css/430.6cd31d9f.chunk.css.map",
     "430.b89d6f0a.chunk.js.map": "/static/js/430.b89d6f0a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2463ddcc.css",
-    "static/js/main.bdaa1cd7.js"
+    "static/css/main.c64ba5a6.css",
+    "static/js/main.d8503672.js"
   ]
 }
