@@ -43,7 +43,7 @@ export default function Greeting() {
                 <Button
                   text="See my resume"
                   newTab={true}
-                  href={greeting.resumeLink}
+                  href={greeting.resumeLink || "#"}
                 />
               </div>
               
@@ -53,7 +53,7 @@ export default function Greeting() {
                 <Button 
                   text="⭐ Star Me On Github "
                   newTab={true}
-                  href={greeting.repoLink}
+                  href={greeting.repoLink || "#"}
                 />
               </div>
           </div>

@@ -6,7 +6,6 @@ import React, {
   lazy,
   useCallback,
 } from "react";
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import "./Project.css";
 import Button from "../../components/button/Button";
 import { openSource, socialMediaLinks } from "../../portfolio";
@@ -24,17 +23,14 @@ export default function Projects() {
   const { isDark } = useContext(StyleContext);
 
   const getRepoData = useCallback(() => {
-    const client = new ApolloClient({
-      uri: "https://api.github.com/graphql",
-      cache: new InMemoryCache(),
+    fetch("https://api.github.com/graphql", {
+      method: "POST",
       headers: {
-        authorization: `Bearer ${openSource.githubConvertedToken}`,
+        Authorization: `Bearer ${openSource.githubConvertedToken}`,
+        "Content-Type": "application/json",
       },
-    });
-
-    client
-      .query({
-        query: gql`
+      body: JSON.stringify({
+        query: `
           {
             user(login: "${openSource.githubUserName}") {
               pinnedItems(first: 6, types: [REPOSITORY]) {
@@ -62,9 +58,16 @@ export default function Projects() {
             }
           }
         `,
+      }),
+    })
+      .then((response) => {
+        if (response.status !== 200) {
+          throw new Error(`Error: ${response.status}`);
+        }
+        return response.json();
       })
       .then((result) => {
-        console.log("GitHub Data:", result); // Log the result for debugging
+        // console.log("GitHub Data:", result);
         if (result.data && result.data.user && result.data.user.pinnedItems) {
           setRepo(result.data.user.pinnedItems.edges);
         } else {
@@ -73,12 +76,7 @@ export default function Projects() {
       })
       .catch((error) => {
         console.error("Error fetching GitHub data:", error);
-        if (error.networkError) {
-          console.error("Network Error:", error.networkError.result.errors);
-        } else {
-          console.error("GraphQL Error:", error.graphQLErrors);
-        }
-        setError(error); // Set the error state
+        setError(error); 
       });
   }, []);
 
@@ -86,9 +84,9 @@ export default function Projects() {
     getRepoData();
   }, [getRepoData]);
 
-  if (error) {
-    return <div>Error fetching GitHub data: {error.message}</div>;
-  }
+  // if (error) {
+  //   return <div>Error fetching GitHub data: {error.message}</div>;
+  // }
 
   if (
     !(typeof repo === "string" || repo instanceof String) &&
@@ -110,7 +108,7 @@ export default function Projects() {
           <Button
             text={"More Projects"}
             className="project-button"
-            href={socialMediaLinks.github}
+            href={socialMediaLinks.github || "#"} // Ensure href is a string
             newTab={true}
           />
         </div>

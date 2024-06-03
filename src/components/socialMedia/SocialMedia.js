@@ -10,7 +10,7 @@ export default function socialMedia() {
     <div className="social-media-div">
       {socialMediaLinks.github ? (
         <a
-          href={socialMediaLinks.github}
+          href={socialMediaLinks.github || "#"}
           className="icon-button github"
           target="_blank"
           rel="noopener noreferrer"
@@ -22,7 +22,7 @@ export default function socialMedia() {
 
       {socialMediaLinks.linkedin ? (
         <a
-          href={socialMediaLinks.linkedin}
+          href={socialMediaLinks.linkedin || "#"}
           className="icon-button linkedin"
           target="_blank"
           rel="noopener noreferrer"
@@ -34,7 +34,7 @@ export default function socialMedia() {
 
       {socialMediaLinks.gmail ? (
         <a
-          href={`mailto:${socialMediaLinks.gmail}`}
+          href={`mailto:${socialMediaLinks.gmail}` || "#"}
           className="icon-button google"
           target="_blank"
           rel="noopener noreferrer"
@@ -46,7 +46,7 @@ export default function socialMedia() {
 
       {socialMediaLinks.gitlab ? (
         <a
-          href={socialMediaLinks.gitlab}
+          href={socialMediaLinks.gitlab || "#"}
           className="icon-button gitlab"
           target="_blank"
           rel="noopener noreferrer"
@@ -58,7 +58,7 @@ export default function socialMedia() {
 
       {socialMediaLinks.facebook ? (
         <a
-          href={socialMediaLinks.facebook}
+          href={socialMediaLinks.facebook || "#"}
           className="icon-button facebook"
           target="_blank"
           rel="noopener noreferrer"
@@ -70,7 +70,7 @@ export default function socialMedia() {
 
       {socialMediaLinks.instagram ? (
         <a
-          href={socialMediaLinks.instagram}
+          href={socialMediaLinks.instagram || "#"}
           className="icon-button instagram"
           target="_blank"
           rel="noopener noreferrer"
@@ -82,7 +82,7 @@ export default function socialMedia() {
 
       {socialMediaLinks.twitter ? (
         <a
-          href={socialMediaLinks.twitter}
+          href={socialMediaLinks.twitter || "#"}
           className="icon-button twitter"
           target="_blank"
           rel="noopener noreferrer"
@@ -94,7 +94,7 @@ export default function socialMedia() {
 
       {socialMediaLinks.medium ? (
         <a
-          href={socialMediaLinks.medium}
+          href={socialMediaLinks.medium || "#"}
           className="icon-button medium"
           target="_blank"
           rel="noopener noreferrer"
@@ -106,7 +106,7 @@ export default function socialMedia() {
 
       {socialMediaLinks.stackoverflow ? (
         <a
-          href={socialMediaLinks.stackoverflow}
+          href={socialMediaLinks.stackoverflow || "#"}
           className="icon-button stack-overflow"
           target="_blank"
           rel="noopener noreferrer"

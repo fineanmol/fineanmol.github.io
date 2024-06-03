@@ -1,16 +1,14 @@
 @font-face {
-  font-family: "Agustina";
+  font-family: "Agustina Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Agustina Regular"),
-    url("./assets/fonts/Agustina.woff") format("woff");
+  src: url("./assets/fonts/Agustina.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: local("Montserrat"),
-    url("./assets/fonts/Montserrat-Regular.ttf") format("woff");
+  src: url("./assets/fonts/Montserrat-Regular.ttf") format("truetype");
   font-display: swap;
 }
 

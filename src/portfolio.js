@@ -58,7 +58,7 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "Html-5",
+      skillName: "HTML5",
       fontAwesomeClassname: "fab fa-html5",
     },
     {
@@ -66,7 +66,7 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-css3-alt",
     },
     {
-      skillName: "sass",
+      skillName: "Sass",
       fontAwesomeClassname: "fab fa-sass",
     },
     {
@@ -77,40 +77,68 @@ https://fontawesome.com/icons?d=gallery */
       },
     },
     {
-      skillName: "ReactjS",
+      skillName: "React.js",
       fontAwesomeClassname: "fab fa-react",
     },
     {
-      skillName: "NodejS",
-      fontAwesomeClassname: "fab fa-node",
+      skillName: "Node.js",
+      fontAwesomeClassname: "fab fa-node-js",
     },
     {
       skillName: "NPM",
       fontAwesomeClassname: "fab fa-npm",
     },
     {
-      skillName: "SQL-database",
+      skillName: "SQL",
       fontAwesomeClassname: "fas fa-database",
     },
     {
-      skillName: "Android",
-      fontAwesomeClassname: "fab fa-android",
-    },
-    {
-      skillName: "AWS",
-      fontAwesomeClassname: "fab fa-aws",
-    },
-    {
-      skillName: "Firebase",
-      fontAwesomeClassname: "fas fa-fire",
+      skillName: "NoSQL",
+      fontAwesomeClassname: "fas fa-database",
     },
     {
       skillName: "Python",
       fontAwesomeClassname: "fab fa-python",
     },
     {
-      skillName: "docker",
+      skillName: "Docker",
       fontAwesomeClassname: "fab fa-docker",
+    },
+    {
+      skillName: "AWS",
+      fontAwesomeClassname: "fab fa-aws",
+    },
+    {
+      skillName: "Tailwind CSS",
+      fontAwesomeClassname: "fab fa-css3-alt",
+    },
+    {
+      skillName: "Material UI",
+      fontAwesomeClassname: "fab fa-css3-alt",
+    },
+    {
+      skillName: "Bootstrap",
+      fontAwesomeClassname: "fab fa-bootstrap",
+    },
+    {
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git",
+    },
+    {
+      skillName: "JIRA",
+      fontAwesomeClassname: "fab fa-jira",
+    },
+    {
+      skillName: "Linux",
+      fontAwesomeClassname: "fab fa-linux",
+    },
+    {
+      skillName: "Android",
+      fontAwesomeClassname: "fab fa-android",
+    },
+    {
+      skillName: "Firebase",
+      fontAwesomeClassname: "fas fa-fire",
     },
   ],
   display: true, // Set false to hide this section, defaults to true
@@ -122,7 +150,23 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Galgotias University",
+      schoolName: "IU University of Applied Sciences, Berlin, Germany",
+      logo: require("./assets/images/IU_logo.png"),
+      subHeader: emoji("Master of Science in Data Science"),
+      duration: "April 2024 - March 2025",
+      desc: "",
+      descBullets: [
+        "Pursuing advanced coursework in Data Science with a focus on practical applications in AI, web development, and software engineering.",
+        emoji(
+          "Maintaining a top-tier GPA, demonstrating consistent academic excellence."
+        ),
+        "Gained in-depth knowledge in Software Engineering, Data Analysis, Machine Learning, and their applications in real-world scenarios.",
+        "Collaborated with peers and faculty on various projects, honing skills in teamwork, communication, and project management.",
+        "Engaged in continuous learning and, staying updated with the latest advancements in Data Science and AI.",
+      ],
+    },
+    {
+      schoolName: "Galgotias University, Delhi, India",
       logo: require("./assets/images/gulogo.png"),
       subHeader: emoji(
         "Bachelor of Technology in Computer Science (🥉 Medalist)"
@@ -130,21 +174,26 @@ const educationInfo = {
       duration: "September 2015 - August 2019",
       desc: "",
       descBullets: [
-        "Participated in the Research of Advanced Threat Detection System and organized 2 hackathons.\n ",
-        emoji(
-          "Ranked in the top 1% of the graduation program, earning the #Medalist🥉 distinction."
-        ),
-        "Completed courses on Software Engineering, Web Security, and Operating Systems, among others.",
+        "Graduated with distinction, ranking in the top 1% of the program.",
+        "Awarded the Bronze Medal for exceptional academic performance.",
+        "Organized and led 2 successful hackathons, fostering innovation and teamwork among participants.",
+        "Completed comprehensive courses in Software Engineering, Web Security, Operating Systems, and Database Management.",
+        "Developed several successful software projects, demonstrating strong problem-solving and technical skills.",
+        "Actively involved in extracurricular activities and tech communities, enhancing leadership and collaboration skills.",
+        "Conducted research on Advanced Threat Detection Systems, contributing to significant improvements in security protocols.",
       ],
     },
     {
-      schoolName: "Saraswati Vidya Mandir",
+      schoolName: "Saraswati Vidya Mandir, India",
       logo: require("./assets/images/school.jpg"),
       subHeader: "Senior Secondary School",
       duration: "March 2014 - April 2015",
       desc: "",
       descBullets: [
-        "Scored 90% with Mathematics, Physics and Chemistry as my major subjects.",
+        "Achieved 90% marks with Mathematics, Physics, and Chemistry as major subjects.",
+        "Demonstrated strong analytical and quantitative skills, excelling in rigorous coursework.",
+        "Participated in science fairs and competitions, showcasing innovative projects and presentations.",
+        "Developed a solid foundation in STEM subjects, paving the way for a successful career in technology.",
       ],
     },
   ],
@@ -180,7 +229,7 @@ const workExperiences = {
       role: "Software Engineer II",
       company: "Shaadi.com",
       companylogo: require("./assets/images/Shaadi.png"),
-      date: "March 2022 – Present",
+      date: "March 2022 – March 2024",
       desc: "",
       descBullets: [
         "Migrated legacy code to enhanced rich Typescript with React Js and NextJS framework.",
@@ -218,14 +267,12 @@ const workExperiences = {
 
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
-
 const openSource = {
-  githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
+  githubConvertedToken: "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",
   githubUserName: "fineanmol", // Change to your github username to view your profile in Contact Section.
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
   display: true, // Set false to hide this section, defaults to true
 };
-
 // Some big projects you have worked on
 
 const bigProjects = {

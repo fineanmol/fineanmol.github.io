@@ -1,5 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
-import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
+import React, { useState, useEffect, lazy, Suspense, useCallback } from "react";
 import { openSource } from "../../portfolio";
 import Contact from "../contact/Contact";
 import Loading from "../loading/Loading";
@@ -10,30 +9,24 @@ const GithubProfileCard = lazy(() =>
 );
 
 export default function Profile() {
-  const [prof, setRepo] = useState([]);
+  const [prof, setProf] = useState([]);
+  const [error, setError] = useState(null);
 
-  function setProfileFunction(array) {
-    setRepo(array);
-  }
+  const setProfileFunction = (profileData) => {
+    setProf(profileData);
+  };
 
-  function getProfileData() {
-    const client = new ApolloClient({
-      uri: "https://api.github.com/graphql",
-      cache: new InMemoryCache(),
-      request: (operation) => {
-        operation.setContext({
-          headers: {
-            authorization: `Bearer ${openSource.githubConvertedToken}`,
-          },
-        });
+  const getProfileData = useCallback(() => {
+    fetch("https://api.github.com/graphql", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${openSource.githubConvertedToken}`,
+        "Content-Type": "application/json",
       },
-    });
-
-    client
-      .query({
-        query: gql`
+      body: JSON.stringify({
+        query: `
           {
-            user(login:"${openSource.githubUserName}") { 
+            user(login: "${openSource.githubUserName}") { 
               name
               bio
               isHireable
@@ -42,26 +35,38 @@ export default function Profile() {
             }
           }
         `,
+      }),
+    })
+      .then((response) => {
+        if (response.status !== 200) {
+          throw new Error(`Error: ${response.status}`);
+        }
+        return response.json();
       })
       .then((result) => {
-        setProfileFunction(result.data.user);
+        if (result.data && result.data.user) {
+          setProfileFunction(result.data.user);
+        } else {
+          setError(new Error("Unexpected data structure"));
+          openSource.showGithubProfile = "false";
+        }
       })
-      .catch(function (error) {
-        console.log(error);
+      .catch((error) => {
+        console.error("Error fetching GitHub data:", error);
+        setError(error);
         setProfileFunction("Error");
         console.log(
           "Because of this Error Contact Section is Showed instead of Profile"
         );
         openSource.showGithubProfile = "false";
       });
-  }
+  }, []);
 
   useEffect(() => {
     if (openSource.showGithubProfile === "true") {
       getProfileData();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [getProfileData]);
 
   if (
     openSource.display &&

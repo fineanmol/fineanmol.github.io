@@ -33,9 +33,9 @@
   font-size: 28px;
   font-weight: 700;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: visible;
   white-space: nowrap;
-  height: 27px;
+  height: 28px;
 }
 
 .education-roundedimg {
@@ -95,7 +95,8 @@
   }
   .education-text-school {
     font-size: 20px;
-    height: 23px;
+    height: 24px;
+    overflow: hidden;
   }
   .education-text-duration {
     font-size: 16px;
