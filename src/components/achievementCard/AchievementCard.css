@@ -14,6 +14,7 @@
   color: #666666;
   font-size: 17px;
   line-height: 1.5rem;
+  text-align: justify;
 }
 .certificate-card {
   background-color: rgb(255, 255, 255);
@@ -64,4 +65,7 @@
 }
 span.certificate-tag:hover {
   background: #8c43ce;
+}
+.achievement-subtitle {
+  text-align: justify;
 }

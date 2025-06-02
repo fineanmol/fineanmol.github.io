@@ -1,4 +1,17 @@
 import emoji from "react-easy-emoji";
+import IU_logo from "./assets/images/IU_logo.png";
+import gulogo from "./assets/images/gulogo.png";
+import school from "./assets/images/school.jpg";
+import knime from "./assets/images/knime.png";
+import Shaadi from "./assets/images/Shaadi.png";
+import infosys from "./assets/images/infosys.png";
+import tfb from "./assets/images/tfb.jpeg";
+import mirai from "./assets/images/mirai.webp";
+import hindcon from "./assets/images/hindcon.png";
+import Rockstar from "./assets/images/Rockstar.png";
+import medal from "./assets/images/medal.jpg";
+import digitalocean from "./assets/images/digitalocean.png";
+import ibm from "./assets/images/ibm.png";
 
 const illustration = {
   animated: true,
@@ -150,7 +163,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "IU University of Applied Sciences, Berlin, Germany",
-      logo: require("./assets/images/IU_logo.png"),
+      logo: IU_logo,
       subHeader: emoji("Master of Science in Data Science"),
       duration: "April 2024 – May 2025",
       desc: "Specializing in advanced machine learning, full-stack web development, and enterprise-scale data engineering solutions.",
@@ -164,7 +177,7 @@ const educationInfo = {
     },
     {
       schoolName: "Galgotias University, Delhi, India",
-      logo: require("./assets/images/gulogo.png"),
+      logo: gulogo,
       subHeader: emoji(
         "Bachelor of Technology in Computer Science (🥉 Medalist)"
       ),
@@ -180,7 +193,7 @@ const educationInfo = {
     },
     {
       schoolName: "Saraswati Vidya Mandir, India",
-      logo: require("./assets/images/school.jpg"),
+      logo: school,
       subHeader: "Senior Secondary School",
       duration: "March 2014 – April 2015",
       desc: "",
@@ -216,7 +229,7 @@ const workExperiences = {
     {
       role: "Frontend Developer",
       company: "KNIME (Berlin, Germany)",
-      companylogo: require("./assets/images/knime.png"),
+      companylogo: knime,
       date: "April 2024 – Present",
       desc: "",
       descBullets: [
@@ -230,7 +243,7 @@ const workExperiences = {
     {
       role: "Software Engineer II",
       company: "Shaadi.com (Mumbai, India)",
-      companylogo: require("./assets/images/Shaadi.png"),
+      companylogo: Shaadi,
       date: "March 2022 – March 2024",
       desc: "",
       descBullets: [
@@ -244,7 +257,7 @@ const workExperiences = {
     {
       role: "Senior Systems Engineer",
       company: "Infosys Ltd. (Bangalore, India)",
-      companylogo: require("./assets/images/infosys.png"),
+      companylogo: infosys,
       date: "September 2019 – March 2022",
       desc: "",
       descBullets: [
@@ -258,7 +271,7 @@ const workExperiences = {
     {
       role: "SDE Intern",
       company: "Infosys Ltd. (Bangalore, India)",
-      companylogo: require("./assets/images/infosys.png"),
+      companylogo: infosys,
       date: "January 2019 – May 2019",
       desc: "",
       descBullets: [
@@ -274,7 +287,7 @@ const workExperiences = {
 
 const openSource = {
   githubUserName: "fineanmol",
-  githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN || "",
+  githubConvertedToken: import.meta.env.VITE_GITHUB_TOKEN || "",
   showGithubProfile: true,
   display: true,
 };
@@ -284,7 +297,6 @@ const bigProjects = {
   subtitle: "STARTUPS AND ENTERPRISE PROJECTS I'VE CONTRIBUTED TO",
   projects: [
     {
-      // image: require("./assets/images/KNIME_AP_Canvas.png"),
       projectName: "KNIME Analytics Platform Frontend",
       projectDesc:
         "Designed and optimized the Workflow Canvas and Sidebar components in KNIME AP's web documentation. Improved rendering speed by 30% and increased test coverage to 95%.",
@@ -296,7 +308,6 @@ const bigProjects = {
       ],
     },
     {
-      // image: require("./assets/images/Shaadi_Migration.png"),
       projectName: "Shaadi.com UI Modernization",
       projectDesc:
         "Led the migration from JavaScript to TypeScript + Next.js for Shaadi.com's core user flows. Reduced page load time by 40% and decreased bug count by 50%.",
@@ -308,19 +319,7 @@ const bigProjects = {
       ],
     },
     {
-      // image: require("./assets/images/SmartAttendance.png"),
-      projectName: "Smart Attendance System",
-      projectDesc:
-        "Built an ASP.NET & MS SQL-based attendance management solution for Galgotias University. Automated roll-call and reporting, saving 80% of manual effort.",
-      footerLink: [
-        {
-          name: "University Project Repo",
-          url: "https://github.com/fineanmol/smart-attendance",
-        },
-      ],
-    },
-    {
-      image: require("./assets/images/tfb.jpeg"),
+      image: tfb,
       projectName: "TheFlyingBasket",
       projectDesc:
         "An online portal offering affordable, chemical-free groceries and personal care products delivered to your doorstep.",
@@ -332,7 +331,7 @@ const bigProjects = {
       ],
     },
     {
-      image: require("./assets/images/mirai.webp"),
+      image: mirai,
       projectName: "Mirai Vizion",
       projectDesc:
         "An AI-based advertising platform enabling businesses to reach global audiences effortlessly.",
@@ -344,7 +343,7 @@ const bigProjects = {
       ],
     },
     {
-      image: require("./assets/images/hindcon.png"),
+      image: hindcon,
       projectName: "Hindcon.com",
       projectDesc:
         "An online portal providing affordable chemicals for home and industrial use, with doorstep delivery.",
@@ -368,7 +367,7 @@ const achievementSection = {
       title: "Rockstar of the Month (Shaadi.com)",
       subtitle:
         "Awarded for exceptional code quality maintenance and resolving 50+ critical bugs within record time.",
-      image: require("./assets/images/Rockstar.png"),
+      image: Rockstar,
       footerLink: [
         {
           name: "Nomination Details",
@@ -384,7 +383,7 @@ const achievementSection = {
       title: "Bronze Medalist (G.U.)",
       subtitle:
         "Awarded Bronze Medal for ranking in the top 1% of the Computer Science program at Galgotias University.",
-      image: require("./assets/images/medal.jpg"),
+      image: medal,
       footerLink: [
         {
           name: "View Medal",
@@ -400,7 +399,7 @@ const achievementSection = {
       title: "Hacktoberfest Open Source Contributor",
       subtitle:
         "Recognized by DigitalOcean from 2019 to 2022 for consistent contributions to open-source projects during Hacktoberfest.",
-      image: require("./assets/images/digitalocean.png"),
+      image: digitalocean,
       footerLink: [
         {
           name: "Swags",
@@ -416,7 +415,7 @@ const achievementSection = {
       title: "IBM Quantum Business Badge",
       subtitle:
         "Earned for leveraging quantum computing technology to propose innovative business solutions.",
-      image: require("./assets/images/ibm.png"),
+      image: ibm,
       footerLink: [
         {
           name: "Badge Details",
