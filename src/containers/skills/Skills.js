@@ -5,6 +5,7 @@ import { illustration, skillsSection } from '../../portfolio';
 import { Fade } from 'react-awesome-reveal';
 import codingPerson from '../../assets/lottie/codingPerson';
 import DisplayLottie from '../../components/displayLottie/DisplayLottie';
+import OptimizedImage from '../../components/OptimizedImage';
 import StyleContext from '../../contexts/StyleContext';
 
 export default function Skills() {
@@ -20,10 +21,13 @@ export default function Skills() {
             {illustration.animated ? (
               <DisplayLottie animationData={codingPerson} />
             ) : (
-              <img
+              <OptimizedImage
                 alt="Man Working"
                 src={require('../../assets/images/developerActivity.svg')}
-              ></img>
+                width={400}
+                height={400}
+                className="skills-image"
+              />
             )}
           </div>
         </Fade>

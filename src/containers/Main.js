@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
@@ -19,46 +19,58 @@ import "./Main.css";
 import Profile from "./profile/Profile";
 // import { educationInfo } from "../portfolio";
 
-export default class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isDark: false,
-    };
-  }
+const Main = () => {
+  const [isDark, setIsDark] = useState(false);
 
-  componentDidMount() {
+  useEffect(() => {
+    // Set initial theme based on system preference
     const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-    this.setState({ isDark: darkPref.matches });
-  }
-  changeTheme = () => {
-    this.setState({ isDark: !this.state.isDark });
-  };
+    setIsDark(darkPref.matches);
 
-  render() {
-    return (
-      <div className={this.state.isDark ? "dark-mode" : null}>
-        <StyleProvider
-          value={{ isDark: this.state.isDark, changeTheme: this.changeTheme }}
-        >
-          <Header />
-          <Greeting />
-          <Skills />
-          <StackProgress />
-          <Education />
-          <WorkExperience />
-          <Projects />
-          <StartupProject />
-          <Achievement />
-          <Blogs />
-          <Talks />
-          <Twitter />
-          <Podcast />
-          <Profile />
-          <Footer />
-          <Top />
-        </StyleProvider>
-      </div>
-    );
-  }
-}
+    // Listen for changes in system theme preference
+    const handleThemeChange = (e) => {
+      setIsDark(e.matches);
+    };
+
+    darkPref.addEventListener("change", handleThemeChange);
+
+    // Cleanup listener on unmount
+    return () => {
+      darkPref.removeEventListener("change", handleThemeChange);
+    };
+  }, []);
+
+  const changeTheme = useCallback(() => {
+    setIsDark(prevIsDark => !prevIsDark);
+  }, []);
+
+  const contextValue = useCallback(() => ({
+    isDark,
+    changeTheme
+  }), [isDark, changeTheme]);
+
+  return (
+    <div className={isDark ? "dark-mode" : null}>
+      <StyleProvider value={contextValue()}>
+        <Header />
+        <Greeting />
+        <Skills />
+        <StackProgress />
+        <Education />
+        <WorkExperience />
+        <Projects />
+        <StartupProject />
+        <Achievement />
+        <Blogs />
+        <Talks />
+        <Twitter />
+        <Podcast />
+        <Profile />
+        <Footer />
+        <Top />
+      </StyleProvider>
+    </div>
+  );
+};
+
+export default Main;

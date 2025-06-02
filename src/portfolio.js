@@ -153,7 +153,7 @@ const educationInfo = {
       schoolName: "IU University of Applied Sciences, Berlin, Germany",
       logo: require("./assets/images/IU_logo.png"),
       subHeader: emoji("Master of Science in Data Science"),
-      duration: "April 2024 - March 2025",
+      duration: "April 2024 - May 2025",
       desc: "",
       descBullets: [
         "Pursuing advanced coursework in Data Science with a focus on practical applications in AI, web development, and software engineering.",

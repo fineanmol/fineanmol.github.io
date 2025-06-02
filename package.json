@@ -25,7 +25,9 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "analyze-images": "node scripts/optimize-images.js",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "eslintConfig": {
     "extends": "react-app"

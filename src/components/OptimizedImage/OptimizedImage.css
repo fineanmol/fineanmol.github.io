@@ -1,0 +1,99 @@
+.optimized-image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.image-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ccc'%3E%3Cpath d='M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  opacity: 0.3;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.optimized-image {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.optimized-image.loading {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.optimized-image.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.optimized-image.blur-placeholder.loading {
+  filter: blur(5px);
+}
+
+.optimized-image.blur-placeholder.loaded {
+  filter: blur(0);
+}
+
+/* Responsive image behavior */
+.optimized-image-container img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Dark mode support */
+.dark-mode .image-placeholder {
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+}
+
+.dark-mode .image-placeholder::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z'/%3E%3C/svg%3E") no-repeat center;
+}
+
+/* Performance optimizations */
+.optimized-image {
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .optimized-image,
+  .image-placeholder {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .optimized-image-container {
+    width: 100%;
+  }
+  
+  .optimized-image {
+    width: 100%;
+    height: auto;
+  }
+} 
