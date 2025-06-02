@@ -27,6 +27,8 @@ You can view the live portfolio at [fineanmol.github.io](https://fineanmol.githu
 ## Technologies Used
 
 - **React**: A JavaScript library for building user interfaces.
+- **Apollo Client**: A comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL.
+- **GraphQL**: A query language for your API.
 - **Lottie**: A library for parsing Adobe After Effects animations exported as JSON with Bodymovin.
 - **CSS**: For styling the components.
 - **Font Awesome**: For icons.
