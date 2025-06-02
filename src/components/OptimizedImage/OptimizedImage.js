@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import './OptimizedImage.css';
 
 const OptimizedImage = ({
@@ -17,13 +17,20 @@ const OptimizedImage = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const [imageSrc, setImageSrc] = useState('');
+  const [hasError, setHasError] = useState(false);
   const imgRef = useRef(null);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
+    if (!imgRef.current || priority) {
+      setIsInView(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        const entry = entries[0];
+        if (entry && entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
         }
@@ -34,75 +41,126 @@ const OptimizedImage = ({
       }
     );
 
-    if (imgRef.current && !priority) {
-      observer.observe(imgRef.current);
-    } else {
-      setIsInView(true);
-    }
+    observer.observe(imgRef.current);
 
     return () => observer.disconnect();
   }, [priority]);
 
-  // Load image when in view
-  useEffect(() => {
-    if (isInView && src) {
-      // For SVG files, use them directly
-      if (src.endsWith('.svg')) {
-        setImageSrc(src);
+  // Check WebP support
+  const supportsWebP = useCallback(() => {
+    return new Promise((resolve) => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 1;
+      canvas.height = 1;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) {
+        resolve(false);
         return;
       }
+      
+      const webpData = canvas.toDataURL('image/webp');
+      resolve(webpData.indexOf('data:image/webp') === 0);
+    });
+  }, []);
 
-      // For other images, try to use WebP if supported
-      const supportsWebP = () => {
-        const canvas = document.createElement('canvas');
-        return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-      };
+  // Load image when in view
+  useEffect(() => {
+    if (!isInView || !src) return;
 
-      if (supportsWebP() && !src.includes('.webp')) {
-        // Try to load WebP version first
-        const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-        const img = new Image();
-        img.onload = () => setImageSrc(webpSrc);
-        img.onerror = () => setImageSrc(src);
-        img.src = webpSrc;
-      } else {
+    // For SVG files, use them directly
+    if (src.endsWith('.svg')) {
+      setImageSrc(src);
+      return;
+    }
+
+    // For other images, try to use WebP if supported
+    const loadOptimizedImage = async () => {
+      try {
+        const webpSupported = await supportsWebP();
+        
+        if (webpSupported && !src.includes('.webp')) {
+          // Try to load WebP version first
+          const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+          const img = new Image();
+          
+          img.onload = () => {
+            setImageSrc(webpSrc);
+            setHasError(false);
+          };
+          
+          img.onerror = () => {
+            setImageSrc(src);
+            setHasError(false);
+          };
+          
+          img.src = webpSrc;
+        } else {
+          setImageSrc(src);
+        }
+      } catch (error) {
+        console.warn('Error loading optimized image:', error);
         setImageSrc(src);
       }
-    }
-  }, [isInView, src]);
+    };
 
-  const handleImageLoad = () => {
+    loadOptimizedImage();
+  }, [isInView, src, supportsWebP]);
+
+  const handleImageLoad = useCallback(() => {
     setIsLoaded(true);
-  };
+    setHasError(false);
+  }, []);
 
-  const handleImageError = () => {
+  const handleImageError = useCallback(() => {
     // Fallback to original source if optimized version fails
     if (imageSrc !== src) {
       setImageSrc(src);
+    } else {
+      setHasError(true);
     }
-  };
+  }, [imageSrc, src]);
 
   const imageClasses = `
     optimized-image
     ${className}
     ${isLoaded ? 'loaded' : 'loading'}
     ${placeholder === 'blur' ? 'blur-placeholder' : ''}
+    ${hasError ? 'error' : ''}
   `.trim();
 
+  const placeholderStyle = {
+    width: width || '100%',
+    height: height || 'auto',
+    aspectRatio: width && height ? `${width}/${height}` : 'auto'
+  };
+
   return (
-    <div className="optimized-image-container" ref={imgRef}>
-      {!isLoaded && placeholder === 'blur' && (
+    <div 
+      className="optimized-image-container" 
+      ref={imgRef}
+      role="img"
+      aria-label={alt}
+    >
+      {!isLoaded && !hasError && placeholder === 'blur' && (
         <div 
           className="image-placeholder"
-          style={{ 
-            width: width || '100%', 
-            height: height || 'auto',
-            aspectRatio: width && height ? `${width}/${height}` : 'auto'
-          }}
+          style={placeholderStyle}
+          aria-hidden="true"
         />
       )}
       
-      {imageSrc && (
+      {hasError && (
+        <div 
+          className="image-error"
+          style={placeholderStyle}
+          role="alert"
+          aria-label={`Failed to load image: ${alt}`}
+        >
+          <span>Image failed to load</span>
+        </div>
+      )}
+      
+      {imageSrc && !hasError && (
         <img
           src={imageSrc}
           alt={alt}
@@ -114,9 +172,18 @@ const OptimizedImage = ({
           onLoad={handleImageLoad}
           onError={handleImageError}
           decoding="async"
+          aria-describedby={`img-desc-${alt.replace(/\s+/g, '-').toLowerCase()}`}
           {...props}
         />
       )}
+      
+      {/* Hidden description for screen readers */}
+      <span 
+        id={`img-desc-${alt.replace(/\s+/g, '-').toLowerCase()}`}
+        className="sr-only"
+      >
+        {alt}
+      </span>
     </div>
   );
 };

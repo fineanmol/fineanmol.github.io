@@ -10,13 +10,21 @@ const GithubProfileCard = lazy(() =>
 
 export default function Profile() {
   const [prof, setProf] = useState([]);
-  const [error, setError] = useState(null);
+  const [hasValidToken, setHasValidToken] = useState(false);
 
   const setProfileFunction = (profileData) => {
     setProf(profileData);
   };
 
   const getProfileData = useCallback(() => {
+    // Check if token exists
+    if (!openSource.githubConvertedToken || openSource.githubConvertedToken === "YOUR_GITHUB_TOKEN_HERE") {
+      console.info("ℹ️ GitHub token not configured for profile. Using Contact section instead.");
+      openSource.showGithubProfile = "false";
+      setHasValidToken(false);
+      return;
+    }
+
     fetch("https://api.github.com/graphql", {
       method: "POST",
       headers: {
@@ -38,27 +46,33 @@ export default function Profile() {
       }),
     })
       .then((response) => {
+        if (response.status === 401) {
+          console.error("Invalid GitHub token for profile. Please check your REACT_APP_GITHUB_TOKEN in .env");
+          openSource.showGithubProfile = "false";
+          setHasValidToken(false);
+          return;
+        }
         if (response.status !== 200) {
-          throw new Error(`Error: ${response.status}`);
+          throw new Error(`GitHub API Error: ${response.status}`);
         }
         return response.json();
       })
       .then((result) => {
-        if (result.data && result.data.user) {
+        if (result && result.data && result.data.user) {
           setProfileFunction(result.data.user);
+          setHasValidToken(true);
         } else {
-          setError(new Error("Unexpected data structure"));
+          console.info("No GitHub profile data found. Using Contact section instead.");
           openSource.showGithubProfile = "false";
+          setHasValidToken(false);
         }
       })
       .catch((error) => {
-        console.error("Error fetching GitHub data:", error);
-        setError(error);
+        console.error("Error fetching GitHub profile data:", error.message);
         setProfileFunction("Error");
-        console.log(
-          "Because of this Error Contact Section is Showed instead of Profile"
-        );
+        console.log("Because of this Error Contact Section is Showed instead of Profile");
         openSource.showGithubProfile = "false";
+        setHasValidToken(false);
       });
   }, []);
 
@@ -71,6 +85,7 @@ export default function Profile() {
   if (
     openSource.display &&
     openSource.showGithubProfile === "true" &&
+    hasValidToken &&
     !(typeof prof === "string" || prof instanceof String)
   ) {
     return (

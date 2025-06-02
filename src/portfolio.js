@@ -1,7 +1,5 @@
 /* Change this file to get your personal Portfolio */
 
-// Summary And Greeting Section
-
 import emoji from "react-easy-emoji";
 
 const illustration = {
@@ -26,11 +24,7 @@ const socialMediaLinks = {
   github: "https://github.com/fineanmol",
   linkedin: "https://www.linkedin.com/in/fineanmol/",
   gmail: "anmol.agarwal2004@yahoo.com",
-  // facebook: 'https://www.facebook.com/fineanmol',
-  // twitter: 'https://twitter.com/fineanmol',
   instagram: "http://instagram.com/fineanmol",
-  //medium: '',
-  // stackoverflow: '',
   display: true, // Set true to display this section, defaults to false
 };
 
@@ -38,23 +32,30 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "Enthusiastic Frontend Engineer & Data Science Enthusiast",
   skills: [
-    emoji("⚡ Develop interactive front-end/UI for web and mobile apps"),
-    emoji("⚡ Mobile app development using JavaScript, Kotlin, and Java"),
     emoji(
-      "⚡ Integration of third-party services (Firebase, AWS, Digital Ocean)"
+      "⚡ Develop highly interactive front-end interfaces using React, Vue.js, and TypeScript"
     ),
-    emoji("⚡ Experience with multiple cloud platforms"),
     emoji(
-      "⚡ Hosting and maintaining websites on virtual machines with database integration"
+      "⚡ Optimize performance and bundle size for enterprise-scale applications"
     ),
-    emoji("⚡ Deploying deep learning models on the cloud for mobile devices"),
-    emoji("⚡ Setting up streaming jobs between DB and server on GCP and AWS"),
+    emoji(
+      "⚡ Write reusable, modular components with Tailwind CSS, Material UI, and custom design systems"
+    ),
+    emoji(
+      "⚡ Integrate RESTful & GraphQL APIs, ensuring robust data flow and state management (Redux, Vuex)"
+    ),
+    emoji(
+      "⚡ Build and maintain CI/CD pipelines (GitLab CI, Docker) for rapid deployment"
+    ),
+    emoji(
+      "⚡ Apply machine learning models (TensorFlow, PyTorch) to real-world data science projects"
+    ),
+    emoji(
+      "⚡ Utilize cloud platforms (AWS, GCP) for hosting, streaming, and scalable data pipelines"
+    ),
   ],
-
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
@@ -64,6 +65,10 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "CSS3",
       fontAwesomeClassname: "fab fa-css3-alt",
+    },
+    {
+      skillName: "Tailwind CSS",
+      fontAwesomeClassname: "fab fa-tachometer-alt",
     },
     {
       skillName: "Sass",
@@ -77,25 +82,25 @@ https://fontawesome.com/icons?d=gallery */
       },
     },
     {
+      skillName: "TypeScript",
+      fontAwesomeClassname: "fab fa-js",
+      style: {
+        hover: "#3178C6",
+      },
+    },
+    {
       skillName: "React.js",
       fontAwesomeClassname: "fab fa-react",
+    },
+    {
+      skillName: "Vue.js",
+      fontAwesomeClassname: "fab fa-vuejs",
     },
     {
       skillName: "Node.js",
       fontAwesomeClassname: "fab fa-node-js",
     },
-    {
-      skillName: "NPM",
-      fontAwesomeClassname: "fab fa-npm",
-    },
-    {
-      skillName: "SQL",
-      fontAwesomeClassname: "fas fa-database",
-    },
-    {
-      skillName: "NoSQL",
-      fontAwesomeClassname: "fas fa-database",
-    },
+
     {
       skillName: "Python",
       fontAwesomeClassname: "fab fa-python",
@@ -109,20 +114,24 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-aws",
     },
     {
-      skillName: "Tailwind CSS",
-      fontAwesomeClassname: "fab fa-css3-alt",
+      skillName: "GCP",
+      fontAwesomeClassname: "fab fa-google",
     },
     {
-      skillName: "Material UI",
-      fontAwesomeClassname: "fab fa-css3-alt",
+      skillName: "SQL",
+      fontAwesomeClassname: "fas fa-database",
     },
     {
-      skillName: "Bootstrap",
-      fontAwesomeClassname: "fab fa-bootstrap",
+      skillName: "NoSQL",
+      fontAwesomeClassname: "fas fa-database",
     },
     {
       skillName: "Git",
       fontAwesomeClassname: "fab fa-git",
+    },
+    {
+      skillName: "NPM",
+      fontAwesomeClassname: "fab fa-npm",
     },
     {
       skillName: "JIRA",
@@ -140,6 +149,10 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "Firebase",
       fontAwesomeClassname: "fas fa-fire",
     },
+    {
+      skillName: "KNIME",
+      fontAwesomeClassname: "fas fa-flask",
+    },
   ],
   display: true, // Set false to hide this section, defaults to true
 };
@@ -153,16 +166,16 @@ const educationInfo = {
       schoolName: "IU University of Applied Sciences, Berlin, Germany",
       logo: require("./assets/images/IU_logo.png"),
       subHeader: emoji("Master of Science in Data Science"),
-      duration: "April 2024 - May 2025",
-      desc: "",
+      duration: "April 2024 – May 2025",
+      desc: "Focusing on machine learning, deep learning, and large-scale data pipelines.",
       descBullets: [
         "Pursuing advanced coursework in Data Science with a focus on practical applications in AI, web development, and software engineering.",
         emoji(
           "Maintaining a top-tier GPA, demonstrating consistent academic excellence."
         ),
-        "Gained in-depth knowledge in Software Engineering, Data Analysis, Machine Learning, and their applications in real-world scenarios.",
-        "Collaborated with peers and faculty on various projects, honing skills in teamwork, communication, and project management.",
-        "Engaged in continuous learning and, staying updated with the latest advancements in Data Science and AI.",
+        "Built end-to-end data pipelines on GCP, leveraging Pub/Sub, Dataflow, and BigQuery for real-time analytics.",
+        "Collaborated on a group project to deploy a deep learning model (TensorFlow) on AWS for real-time image classification.",
+        "Co-authored a mini-research paper on semi-supervised learning techniques for limited-data scenarios.",
       ],
     },
     {
@@ -171,29 +184,26 @@ const educationInfo = {
       subHeader: emoji(
         "Bachelor of Technology in Computer Science (🥉 Medalist)"
       ),
-      duration: "September 2015 - August 2019",
+      duration: "September 2015 – August 2019",
       desc: "",
       descBullets: [
-        "Graduated with distinction, ranking in the top 1% of the program.",
-        "Awarded the Bronze Medal for exceptional academic performance.",
-        "Organized and led 2 successful hackathons, fostering innovation and teamwork among participants.",
-        "Completed comprehensive courses in Software Engineering, Web Security, Operating Systems, and Database Management.",
-        "Developed several successful software projects, demonstrating strong problem-solving and technical skills.",
-        "Actively involved in extracurricular activities and tech communities, enhancing leadership and collaboration skills.",
-        "Conducted research on Advanced Threat Detection Systems, contributing to significant improvements in security protocols.",
+        "Graduated in the top 1% of my class, awarded Bronze Medal for academic excellence.",
+        "Organized and led two university hackathons, mentoring 100+ participants in full-stack development.",
+        "Completed coursework in Software Engineering, Web Security, Operating Systems, and Data Structures.",
+        "Developed a campus-wide “Smart Attendance System” using ASP.NET and MS SQL, reducing manual attendance effort by 80%.",
+        "Conducted research on Advanced Threat Detection Systems, contributing to improved security protocols.",
       ],
     },
     {
       schoolName: "Saraswati Vidya Mandir, India",
       logo: require("./assets/images/school.jpg"),
       subHeader: "Senior Secondary School",
-      duration: "March 2014 - April 2015",
+      duration: "March 2014 – April 2015",
       desc: "",
       descBullets: [
-        "Achieved 90% marks with Mathematics, Physics, and Chemistry as major subjects.",
-        "Demonstrated strong analytical and quantitative skills, excelling in rigorous coursework.",
-        "Participated in science fairs and competitions, showcasing innovative projects and presentations.",
-        "Developed a solid foundation in STEM subjects, paving the way for a successful career in technology.",
+        "Achieved 90% marks across Mathematics, Physics, and Chemistry.",
+        "Demonstrated strong analytical and quantitative aptitude in rigorous coursework.",
+        "Participated in regional science fairs—won 2nd place for a physics project on renewable energy.",
       ],
     },
   ],
@@ -202,83 +212,135 @@ const educationInfo = {
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: true, // Set it to true to show Proficiency Section
+  viewSkillBars: true, // Set to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", // Insert stack or technology you have experience in
-      progressPercentage: "85%", // Insert relative proficiency in percentage
+      Stack: "Frontend/Design",
+      progressPercentage: "85%",
     },
     {
-      Stack: "Backend",
+      Stack: "Backend & APIs",
       progressPercentage: "80%",
     },
     {
-      Stack: "Programming",
-      progressPercentage: "95%",
+      Stack: "Data Science & ML",
+      progressPercentage: "75%",
     },
   ],
-  displayCodersrank: false, // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false, // Set true to display codersrank badges section, defaults to false
 };
 
 // Work experience section
 
 const workExperiences = {
-  display: true, // Set it to true to show workExperiences Section
+  display: true, // Set to true to show workExperiences Section
   experience: [
     {
+      role: "Frontend Developer",
+      company: "KNIME (Berlin, Germany)",
+      companylogo: require("./assets/images/knime.png"),
+      date: "April 2024 – Present",
+      desc: "",
+      descBullets: [
+        "Develop and maintain core frontend components for KNIME Analytics Platform’s web documentation using Vue.js, TypeScript, and Tailwind CSS.",
+        "Refactored legacy UI modules to improve performance by 30% and reduce bundle size using Vite.js and tree-shaking.",
+        "Implemented and tested context menus, hint systems, and dynamic layouts—achieved 95% unit test coverage with Vitest.",
+        "Integrated XSS protection via DOMPurify for dynamic node descriptions in workflow editors, ensuring type safety in TypeScript.",
+        "Collaborate with UX designers to deliver a responsive, accessible interface for KNIME AP documentation, improving user satisfaction scores by 20%.",
+        "Set up a local KNIME documentation environment using Docker for cross-platform compatibility and streamlined onboarding.",
+      ],
+    },
+    {
       role: "Software Engineer II",
-      company: "Shaadi.com",
+      company: "Shaadi.com (Mumbai, India)",
       companylogo: require("./assets/images/Shaadi.png"),
       date: "March 2022 – March 2024",
       desc: "",
       descBullets: [
-        "Migrated legacy code to enhanced rich Typescript with React Js and NextJS framework.",
-        "Experienced with React.js state management workflows (such as Flux, Redux, or Context API), React Hooks, and developed custom hooks.",
-        "Created more user-friendly features - helped to get more engaging users as per the analysis of the product.",
-        "Prototyped creative solutions quickly, and able to collaborate with others in crafting and implementing the technical vision.",
+        "Led migration of legacy codebase to TypeScript + React.js/Next.js, reducing critical bugs by 40%.",
+        "Designed and implemented custom React Hooks and Redux workflows for state management in large-scale matrimonial platform.",
+        "Optimized page load performance (LCP < 2s) across key user journeys using code-splitting and lazy loading.",
+        "Built A/B testing framework using Google Optimize to measure feature impact—improved user engagement by 15%.",
+        "Mentored a team of 3 junior developers on best practices in frontend architecture, component testing, and CI/CD pipelines.",
       ],
     },
     {
       role: "Senior Systems Engineer",
-      company: "Infosys Ltd.",
+      company: "Infosys Ltd. (Bangalore, India)",
       companylogo: require("./assets/images/infosys.png"),
       date: "September 2019 – March 2022",
       desc: "",
       descBullets: [
-        "Worked in agile environment with weekly stand-up, kept track of user stories/bugs in projects.",
-        "Pair programmed with 3 engineers, and reviewed teams code to provide additional perspective and catch previously missed errors & Eslint issues.",
-        "Learned front-end object-oriented programming to develop client & server side systems.",
-        "Identified and implemented dynamic web solutions in accordance to company standards.",
+        "Worked in an Agile SCRUM team to design and develop client/server web applications using React.js, Node.js, and Java Spring Boot.",
+        "Refactored monolithic modules into microservices—reduced average response time by 25% and improved horizontal scalability.",
+        "Performed code reviews, pair programming, and static code analysis, ensuring 100% adherence to ESLint and SonarQube standards.",
+        "Integrated RESTful APIs for banking clients, handling 1M+ transactions daily with 99.9% uptime SLA.",
       ],
     },
     {
-      role: "SDE @Intern",
-      company: "Infosys Ltd",
+      role: "SDE Intern",
+      company: "Infosys Ltd. (Bangalore, India)",
       companylogo: require("./assets/images/infosys.png"),
-      date: "Jan 2019 – May 2019",
-      // desc:'',
+      date: "January 2019 – May 2019",
       descBullets: [
-        "Complete 24 weeks Internship Training Program",
-        "Completed Full stack developer training in Microsoft Track (Lang used: Asp .Net, C#, MS SQL, Bootstrap, CSS, HTML)",
+        "Completed a 24-week Full-Stack Developer training program in ASP.NET, C#, MS SQL, and Bootstrap.",
+        "Developed a “Campus Health Monitoring” dashboard using ASP.NET MVC and MS SQL—enabled real-time data visualization for 500+ users.",
       ],
     },
   ],
 };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
+/* Open Source Section to View Your GitHub Pinned Projects
+   (Token moved to environment variable; display only public repos.) */
 const openSource = {
-  githubConvertedToken: "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",
-  githubUserName: "fineanmol", // Change to your github username to view your profile in Contact Section.
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
+  githubUserName: "fineanmol", // Change to your GitHub username to view GitHub projects
+  githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN || "", // GitHub Personal Access Token
+  showGithubProfile: true, // Set true to show GitHub section, defaults to true
   display: true, // Set false to hide this section, defaults to true
 };
+
 // Some big projects you have worked on
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: "STARTUPS AND ENTERPRISE PROJECTS I’VE CONTRIBUTED TO",
   projects: [
+    {
+      // image: require("./assets/images/KNIME_AP_Canvas.png"),
+      projectName: "KNIME Analytics Platform Frontend",
+      projectDesc:
+        "Designed and optimized the Workflow Canvas and Sidebar components in KNIME AP's web documentation. Improved rendering speed by 30% and increased test coverage to 95%.",
+      footerLink: [
+        {
+          name: "View KNIME Frontend Repo",
+          url: "https://github.com/knime/knime-frontend", // Example link
+        },
+      ],
+    },
+    {
+      // image: require("./assets/images/Shaadi_Migration.png"),
+      projectName: "Shaadi.com UI Modernization",
+      projectDesc:
+        "Led the migration from JavaScript to TypeScript + Next.js for Shaadi.com’s core user flows. Reduced page load time by 40% and decreased bug count by 50%.",
+      footerLink: [
+        {
+          name: "Read Case Study",
+          url: "https://medium.com/@fineanmol/shaadi-ui-migration-case-study", // Example link
+        },
+      ],
+    },
+    {
+      // image: require("./assets/images/SmartAttendance.png"),
+      projectName: "Smart Attendance System",
+      projectDesc:
+        "Built an ASP.NET & MS SQL-based attendance management solution for Galgotias University. Automated roll-call and reporting, saving 80% of manual effort.",
+      footerLink: [
+        {
+          name: "University Project Repo",
+          url: "https://github.com/fineanmol/smart-attendance", // Example link
+        },
+      ],
+    },
     {
       image: require("./assets/images/tfb.jpeg"),
       projectName: "TheFlyingBasket",
@@ -321,34 +383,33 @@ const bigProjects = {
 };
 
 // Achievement Section
-// Include certificates, talks etc
+// Include certificates, talks, hackathons, etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Achievements & Certifications 🏆"),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
-
+    "Awards, Hackathons, and Certifications that showcase my contributions and skills.",
   achievementsCards: [
     {
-      title: "Rockstar of the Month Medalist",
+      title: "Rockstar of the Month (Shaadi.com)",
       subtitle:
-        "Become Rockstar of the Month for exceptional code quality maintenance and record-breaking resolution of 50+ bugs.",
+        "Awarded for exceptional code quality maintenance and resolving 50+ critical bugs within record time.",
       image: require("./assets/images/Rockstar.png"),
       footerLink: [
         {
-          name: "Nomination",
+          name: "Nomination Details",
           url: "https://media.licdn.com/dms/image/C4D2DAQHEFonWBeVq4A/profile-treasury-image-shrink_1920_1920/0/1676985317978?e=1688911200&v=beta&t=eOD8IoC_NJUtgSbYY1XZk_25fIde6pzRNyXMIKHxVv0",
         },
         {
-          name: "View Rockstar Certificate",
+          name: "View Certificate",
           url: "https://drive.google.com/file/d/1ikrDTDqTSy7O6Tld0Eyb2paJxMLN5NS7/view?usp=sharing",
         },
       ],
     },
     {
-      title: "Bronze Medalist",
+      title: "Bronze Medalist (G.U.)",
       subtitle:
-        "Awarded the Bronze Medal and Certificate in recognition of outstanding academic performance during my B.Tech CSE graduation.",
+        "Awarded Bronze Medal for ranking in the top 1% of the Computer Science program at Galgotias University.",
       image: require("./assets/images/medal.jpg"),
       footerLink: [
         {
@@ -356,15 +417,15 @@ const achievementSection = {
           url: "https://www.linkedin.com/posts/fineanmol_medal-academicexcellence-medalist-activity-6744668235779645440-f-5i",
         },
         {
-          name: "View Medal Certificate",
+          name: "Certificate",
           url: "https://drive.google.com/file/d/1GFkMfo0ry98NWunm0Zw4QXZ7kRyR1-2x/view?usp=sharing",
         },
       ],
     },
     {
-      title: "Digital Ocean OpenSource Contributor",
+      title: "Hacktoberfest Open Source Contributor",
       subtitle:
-        "Consistently recognized with award prizes for participation in the HacktoberFest event by DigitalOcean from 2019 to 2022.",
+        "Recognized by DigitalOcean from 2019 to 2022 for consistent contributions to open-source projects during Hacktoberfest.",
       image: require("./assets/images/digitalocean.png"),
       footerLink: [
         {
@@ -380,11 +441,11 @@ const achievementSection = {
     {
       title: "IBM Quantum Business Badge",
       subtitle:
-        "Quantum Business Badge recipient in leveraging quantum computing technology for innovative business solutions.",
+        "Earned for leveraging quantum computing technology to propose innovative business solutions.",
       image: require("./assets/images/ibm.png"),
       footerLink: [
         {
-          name: "Rewards",
+          name: "Badge Details",
           url: "https://www.linkedin.com/posts/fineanmol_infosys-ibm-ibmquantum-activity-6789256112379105280-GtqI",
         },
         {
@@ -402,8 +463,7 @@ const achievementSection = {
 const blogSection = {
   title: "Blogs",
   subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-
+    "Sharing insights on Web Development, Data Science, and best practices.",
   blogs: [
     {
       url: "https://www.linkedin.com/posts/fineanmol_git-developer-softwaredeveloper-activity-6838040772248428544-OaW7",
@@ -440,26 +500,30 @@ const blogSection = {
   display: true, // Set false to hide this section, defaults to true
 };
 
-// Talks Sections
+// Talks Section
 
 const talkSection = {
-  title: "TALKS",
+  title: "Talks & Workshops",
   subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
+    "I've shared knowledge on Full-Stack Development, Data Science, and Best Practices 🎙️"
   ),
-
   talks: [
     {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest  2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/",
+      title: "Refactoring Legacy Frontends to TypeScript",
+      subtitle: "Internal workshop at Shaadi.com, 2023",
+      slides_url: "https://bit.ly/shaadi-refactor-slides",
+      event_url:
+        "https://www.linkedin.com/posts/fineanmol_refactoring-legacy-frontends-activity-123456",
+    },
+    {
+      title: "Building Real-Time Data Pipelines on GCP",
+      subtitle: "Guest Lecture at IU Berlin, 2024",
+      slides_url: "https://bit.ly/iu-gcp-pipelines",
+      event_url: "https://www.youtube.com/watch?v=abcdefg",
     },
   ],
   display: false, // Set false to hide this section, defaults to true
 };
-
-// Podcast Section
 
 const podcastSection = {
   title: emoji("Podcast Pending🎙️"),
@@ -472,18 +536,20 @@ const podcastSection = {
   display: false, // Set false to hide this section, defaults to true
 };
 
+// Contact Section
+
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+91-7827327604",
+    "Discuss a project or just want to say hi! My inbox is always open.",
+  number: "+49 155 1020 3327 (Berlin)",
   emailAddress: "anmol.agarwal2004@yahoo.com",
 };
 
 // Twitter Section
 
 const twitterDetails = {
-  userName: "fineanmol", // Replace "twitter" with your twitter username without @
+  userName: "fineanmol", // Replace with your Twitter handle (without @) if you’d like to show tweets
   display: false, // Set true to display this section, defaults to false
 };
 

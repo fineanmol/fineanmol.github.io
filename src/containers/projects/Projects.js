@@ -16,13 +16,49 @@ export default function Projects() {
   const GithubRepoCard = lazy(() =>
     import("../../components/githubRepoCard/GithubRepoCard")
   );
-  const FailedLoading = () => null;
+  const FailedLoading = () => (
+    <div className="main" id="opensource">
+      <h1 className="project-title">Open Source Projects</h1>
+      <div className="repo-cards-div-main">
+        <div className="projects-fallback">
+          <h3>🔑 GitHub API Token Required</h3>
+          <p>
+            To display live GitHub projects, please add your GitHub Personal Access Token to the .env file.
+          </p>
+          <p>
+            <strong>Instructions:</strong>
+          </p>
+          <ol>
+            <li>Copy <code>env.example</code> to <code>.env</code></li>
+            <li>Get your token from GitHub Settings → Developer settings → Personal access tokens</li>
+            <li>Add the token to <code>REACT_APP_GITHUB_TOKEN</code> in .env</li>
+            <li>Restart the development server</li>
+          </ol>
+        </div>
+      </div>
+      <Button
+        text={"View GitHub Profile"}
+        className="project-button"
+        href={socialMediaLinks.github || "#"}
+        newTab={true}
+      />
+    </div>
+  );
   const renderLoader = () => <Loading />;
   const [repo, setRepo] = useState([]);
-  const [error, setError] = useState(null); // State to track errors
+  const [hasToken, setHasToken] = useState(false);
   const { isDark } = useContext(StyleContext);
 
   const getRepoData = useCallback(() => {
+    // Check if token exists
+    if (!openSource.githubConvertedToken || openSource.githubConvertedToken === "YOUR_GITHUB_TOKEN_HERE") {
+      console.info("ℹ️ GitHub token not configured. Set REACT_APP_GITHUB_TOKEN in .env file to display live projects.");
+      setHasToken(false);
+      return;
+    }
+
+    setHasToken(true);
+
     fetch("https://api.github.com/graphql", {
       method: "POST",
       headers: {
@@ -61,22 +97,24 @@ export default function Projects() {
       }),
     })
       .then((response) => {
+        if (response.status === 401) {
+          throw new Error("Invalid GitHub token. Please check your REACT_APP_GITHUB_TOKEN in .env");
+        }
         if (response.status !== 200) {
-          throw new Error(`Error: ${response.status}`);
+          throw new Error(`GitHub API Error: ${response.status}`);
         }
         return response.json();
       })
       .then((result) => {
-        // console.log("GitHub Data:", result);
         if (result.data && result.data.user && result.data.user.pinnedItems) {
           setRepo(result.data.user.pinnedItems.edges);
         } else {
-          setError(new Error("Unexpected data structure"));
+          throw new Error("No pinned repositories found");
         }
       })
       .catch((error) => {
-        console.error("Error fetching GitHub data:", error);
-        setError(error); 
+        console.error("Error fetching GitHub data:", error.message);
+        setHasToken(false);
       });
   }, []);
 
@@ -84,13 +122,11 @@ export default function Projects() {
     getRepoData();
   }, [getRepoData]);
 
-  // if (error) {
-  //   return <div>Error fetching GitHub data: {error.message}</div>;
-  // }
-
   if (
+    openSource.display &&
+    hasToken &&
     !(typeof repo === "string" || repo instanceof String) &&
-    openSource.display
+    repo.length > 0
   ) {
     return (
       <Suspense fallback={renderLoader()}>
@@ -99,7 +135,7 @@ export default function Projects() {
           <div className="repo-cards-div-main">
             {repo.map((v) => {
               return (
-                v.node && ( // Add null check for v.node
+                v.node && (
                   <GithubRepoCard repo={v} key={v.node.id} isDark={isDark} />
                 )
               );
@@ -108,13 +144,15 @@ export default function Projects() {
           <Button
             text={"More Projects"}
             className="project-button"
-            href={socialMediaLinks.github || "#"} // Ensure href is a string
+            href={socialMediaLinks.github || "#"}
             newTab={true}
           />
         </div>
       </Suspense>
     );
-  } else {
+  } else if (openSource.display) {
     return <FailedLoading />;
+  } else {
+    return null;
   }
 }
