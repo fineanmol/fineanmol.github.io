@@ -504,7 +504,7 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi! My inbox is always open.",
-  number: "+49 155 1020 3327 (Berlin)",
+  number: "+49 155 1020 0497 (Berlin)",
   emailAddress: "anmol.agarwal2004@yahoo.com",
 };
 
