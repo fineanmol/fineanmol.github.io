@@ -9,6 +9,7 @@
     "colorthief": "^2.6.0",
     "gh-pages": "^6.3.0",
     "graphql": "^16.11.0",
+    "lucide-react": "^0.553.0",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.3.1",
     "react-dom": "^18.2.0",
@@ -16,6 +17,7 @@
     "react-error-boundary": "^6.0.0",
     "react-headroom": "^3.2.1",
     "react-lottie-player": "^2.1.0",
+    "react-router-dom": "^7.9.6",
     "react-twitter-embed": "^4.0.4",
     "simple-icons": "^15.0.0",
     "web-vitals": "^5.0.2"
