@@ -312,6 +312,7 @@ const bigProjects = {
   subtitle: "STARTUPS AND ENTERPRISE PROJECTS I'VE CONTRIBUTED TO",
   projects: [
     {
+      image: knime,
       projectName: "KNIME Analytics Platform Frontend",
       projectDesc:
         "Designed and optimized the Workflow Canvas and Sidebar components in KNIME AP's web documentation. Improved rendering speed by 30% and increased test coverage to 95%.",
@@ -323,6 +324,7 @@ const bigProjects = {
       ],
     },
     {
+      image: Shaadi,
       projectName: "Shaadi.com UI Modernization",
       projectDesc:
         "Led the migration from JavaScript to TypeScript + Next.js for Shaadi.com's core user flows. Reduced page load time by 40% and decreased bug count by 50%.",
