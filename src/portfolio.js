@@ -3,6 +3,7 @@ import IU_logo from "./assets/images/IU_logo.png";
 import gulogo from "./assets/images/gulogo.png";
 import school from "./assets/images/school.jpg";
 import knime from "./assets/images/knime.png";
+import link11 from "./assets/images/link11.png";
 import Shaadi from "./assets/images/Shaadi.png";
 import infosys from "./assets/images/infosys.png";
 import tfb from "./assets/images/tfb.jpeg";
@@ -228,34 +229,48 @@ const workExperiences = {
   experience: [
     {
       role: "Frontend Developer",
+      company: "Link11 GmbH (Berlin, Germany)",
+      companylogo: link11,
+      date: "August 2025 – Present",
+      desc: "Link11 is a leading European cybersecurity company specializing in cloud-based DDoS protection and IT security solutions, evolving into a unified security platform (WAAP).",
+      descBullets: [
+        "Contributing to the Fabric unification initiative—a Vue-based multi-frontend architecture driving consistency, scalability, and developer productivity.",
+        "Developing the Fabric unified platform frontend with Vue 3, ensuring seamless integration across multiple security modules.",
+        "Leveraging Storybook for component development, documentation, and cross-team collaboration.",
+        "Tackling advanced TypeScript and front-end performance optimization issues within the core security framework.",
+        "Consolidating DOSarrest, Reblaze, and core services into one end-to-end protection stack.",
+      ],
+    },
+    {
+      role: "Software Developer",
       company: "KNIME (Berlin, Germany)",
       companylogo: knime,
-      date: "April 2024 – Present",
-      desc: "",
+      date: "June 2024 – July 2025",
+      desc: "KNIME is an open-source data analytics platform empowering organizations with advanced data science, machine learning, and workflow automation.",
       descBullets: [
-        "Develop and maintain core frontend components for KNIME Analytics Platform's web documentation using Vue.js, TypeScript, and Tailwind CSS.",
-        "Refactored legacy UI modules to improve performance by 30% and reduce bundle size using Vite.js and tree-shaking.",
-        "Implemented comprehensive testing strategy with Vitest achieving 95% unit test coverage for context menus and dynamic layouts.",
-        "Integrated XSS protection via DOMPurify for workflow editors, ensuring type safety and security in enterprise-grade applications.",
-        "Collaborate with UX designers to deliver responsive, accessible interfaces, improving user satisfaction scores by 20%.",
+        "Developed user-centric web/desktop applications using Vue.js, enhancing the user experience for data-driven decision-making.",
+        "Migrated legacy components to modern Vue 3 TypeScript architecture, improving maintainability and reducing technical debt.",
+        "Implemented comprehensive unit testing strategies using Jest, achieving over 98% code coverage and reducing production bugs.",
+        "Created intuitive interfaces that simplify complex data analytics workflows for businesses and researchers.",
+        "Collaborated with cross-functional teams to deliver features that improved platform adoption and user satisfaction.",
       ],
     },
     {
-      role: "Software Engineer II",
-      company: "Shaadi.com (Mumbai, India)",
+      role: "Software Engineer III",
+      company: "Shaadi.com (Remote)",
       companylogo: Shaadi,
       date: "March 2022 – March 2024",
-      desc: "",
+      desc: "Shaadi is India's leading & World's #1 Matchmaking Platform with 35Mn+ active users worldwide.",
       descBullets: [
-        "Led migration of legacy codebase to TypeScript + React.js/Next.js, reducing critical bugs by 40%.",
-        "Designed and implemented custom React Hooks and Redux workflows for state management in large-scale matrimonial platform.",
-        "Optimized page load performance (LCP < 2s) across key user journeys using code-splitting and lazy loading.",
-        "Built A/B testing framework using Google Optimize to measure feature impact—improved user engagement by 15%.",
-        "Mentored a team of 3 junior developers on best practices in frontend architecture, component testing, and CI/CD pipelines.",
+        "Led development of user engagement features—onboarding, authentication, verification, and AI-driven recommendation systems.",
+        "Migrated legacy codebase to TypeScript with React.js/Next.js framework, improving code quality and maintainability.",
+        "Designed and built next-level interactive features using Redux for state management, increasing user engagement metrics.",
+        "Worked on Application Tracking System with AI-driven processing, filters, and chat functionality with a team of 4 developers.",
+        "Created user-friendly features that significantly increased user engagement based on product analysis and feedback.",
       ],
     },
     {
-      role: "Senior Systems Engineer",
+      role: "Senior Software Engineer",
       company: "Infosys Ltd. (Bangalore, India)",
       companylogo: infosys,
       date: "September 2019 – March 2022",
@@ -270,16 +285,16 @@ const workExperiences = {
     },
     {
       role: "SDE Intern",
-      company: "Infosys Ltd. (Bangalore, India)",
+      company: "Infosys Ltd. (Bengaluru, India)",
       companylogo: infosys,
       date: "January 2019 – May 2019",
       desc: "",
       descBullets: [
-        "Completed intensive 24-week Full-Stack Developer training program in ASP.NET, C#, MS SQL, and Bootstrap with distinction.",
-        'Developed "Campus Health Monitoring" dashboard using ASP.NET MVC and MS SQL—enabled real-time data visualization for 500+ users.',
-        "Implemented responsive UI components with Bootstrap and jQuery, ensuring cross-browser compatibility and mobile responsiveness.",
-        "Designed and optimized database schemas in MS SQL Server, improving query performance by 40% for reporting modules.",
-        "Collaborated with senior developers on code reviews and debugging, gaining hands-on experience with enterprise development practices.",
+        "Completed intensive 24-week Full-Stack Developer training program in Microsoft Track with distinction.",
+        "Trained in ASP.NET, C#, MS SQL, CSS, Bootstrap, and server-less architecture on AWS, GCP, and Azure.",
+        "Developed full-stack applications using ASP.NET MVC and MS SQL with responsive UI components.",
+        "Gained hands-on experience with enterprise development practices, code reviews, and debugging.",
+        "Built strong foundation in modern web development technologies and cloud platforms.",
       ],
     },
   ],
