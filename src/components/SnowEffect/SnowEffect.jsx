@@ -1,4 +1,5 @@
 import React from "react";
+import "./SnowEffect.css";
 
 export function SnowEffect() {
   const snowflakes = Array.from({ length: 50 }, (_, i) => ({

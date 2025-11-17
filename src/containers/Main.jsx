@@ -15,12 +15,14 @@ import Education from "./education/Education";
 import Top from "./topbutton/Top";
 import Twitter from "./twitter-embed/twitter";
 import { StyleProvider } from "../contexts/StyleContext";
+import { SnowEffect } from "../components/SnowEffect/SnowEffect";
 import "./Main.css";
 import Profile from "./profile/Profile";
 // import { educationInfo } from "../portfolio";
 
 const Main = () => {
   const [isDark, setIsDark] = useState(false);
+  const [showSnow, setShowSnow] = useState(false);
 
   useEffect(() => {
     // Set initial theme based on system preference
@@ -33,6 +35,14 @@ const Main = () => {
     };
 
     darkPref.addEventListener("change", handleThemeChange);
+
+    // Check if current month is November (10), December (11), or January (0)
+    const checkWinterMonths = () => {
+      const currentMonth = new Date().getMonth();
+      setShowSnow(currentMonth === 10 || currentMonth === 11 || currentMonth === 0);
+    };
+
+    checkWinterMonths();
 
     // Cleanup listener on unmount
     return () => {
@@ -52,6 +62,7 @@ const Main = () => {
   return (
     <div className={isDark ? "dark-mode" : null}>
       <StyleProvider value={contextValue()}>
+        {showSnow && <SnowEffect />}
         <Header />
         <Greeting />
         <Skills />

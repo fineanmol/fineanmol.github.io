@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { CalendarCard } from './CalendarCard';
 import { Modal } from './Modal';
-import { SnowEffect } from './SnowEffect';
+import { SnowEffect } from '../../components/SnowEffect/SnowEffect';
 import { calendarContent } from './calendarContent';
 import { useLocalStorage } from './useLocalStorage';
 import Header from '../../components/header/Header';
@@ -22,18 +22,17 @@ function AdventCalendar() {
     changeTheme
   }), [isDark, changeTheme]);
 
-  // Get current date and check if it's November (for testing) or December
+  // Get current day of the month (works for any month)
   const getCurrentDay = () => {
     const now = new Date();
-    const month = now.getMonth(); // 0-11, November is 10, December is 11
     const day = now.getDate(); // 1-31
     
-    // For testing: Using November instead of December
-    // Change month === 10 to month === 11 when ready for production in December
-    // For testing/development, you can also allow all days by uncommenting the line below
+    // Returns the current day of any month
+    // If today is the 5th, days 1-5 are unlocked
+    // For testing/development, you can unlock all days by uncommenting the line below
     // return 24; // Uncomment this to unlock all days for testing
     
-    return month === 10 ? day : 0; // month === 10 is November
+    return day;
   };
 
   const currentDay = getCurrentDay();
@@ -81,14 +80,14 @@ function AdventCalendar() {
             <span className="stat">
               {openedCards.length} / {currentDay > 0 ? currentDay : 24} Days Unlocked
             </span>
-            {currentDay > 0 && currentDay <= 24 && (
+            {currentDay <= 24 && (
               <span className="stat" style={{ marginLeft: '1rem' }}>
                 📅 Day {currentDay} Available
               </span>
             )}
-            {currentDay === 0 && (
+            {currentDay > 24 && (
               <span className="stat" style={{ marginLeft: '1rem' }}>
-                🔒 Coming Soon
+                🎉 All Days Unlocked!
               </span>
             )}
           </div>

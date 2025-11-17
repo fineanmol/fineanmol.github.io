@@ -25,6 +25,33 @@ export function Modal({ content, onClose }) {
           <span className="modal-day">Day {content.day}</span>
           <h2 className="modal-title">{content.title}</h2>
           <p className="modal-description">{content.description}</p>
+          
+          {content.browserSupport && (
+            <div className="browser-support">
+              <span className="support-label">Browser Support:</span>
+              <div className="support-badges">
+                {content.browserSupport.map((browser, index) => (
+                  <span key={index} className="support-badge">{browser}</span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {content.links && content.links.length > 0 && (
+            <div className="resource-links">
+              {content.links.map((link, index) => (
+                <a 
+                  key={index} 
+                  href={link.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="resource-link"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="code-block">
