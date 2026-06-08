@@ -1,0 +1,17 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://fineanmol.github.io/sitemap.xml
+
+# Block access to development files
+Disallow: /static/
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Allow important assets
+Allow: /static/media/
+Allow: /favicon.ico
+Allow: /manifest.json
