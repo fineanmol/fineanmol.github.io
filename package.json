@@ -4,23 +4,25 @@
   "version": "4.5.0",
   "private": true,
   "dependencies": {
-    "@apollo/client": "^3.13.8",
+    "@apollo/client": "^4.2.3",
     "@apollo/react-hooks": "^4.0.0",
-    "colorthief": "^2.6.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "colorthief": "^3.3.1",
     "gh-pages": "^6.3.0",
-    "graphql": "^16.11.0",
-    "lucide-react": "^0.553.0",
-    "react": "^18.2.0",
+    "graphql": "^16.14.2",
+    "lucide-react": "^1.18.0",
+    "react": "^18.3.1",
     "react-awesome-reveal": "^4.3.1",
-    "react-dom": "^18.2.0",
+    "react-dom": "^18.3.1",
     "react-easy-emoji": "^1.8.1",
-    "react-error-boundary": "^6.0.0",
+    "react-error-boundary": "^6.1.2",
     "react-headroom": "^3.2.1",
     "react-lottie-player": "^2.1.0",
-    "react-router-dom": "^7.9.6",
+    "react-router-dom": "^7.17.0",
     "react-twitter-embed": "^4.0.4",
-    "simple-icons": "^15.0.0",
-    "web-vitals": "^5.0.2"
+    "simple-icons": "^16.23.0",
+    "web-vitals": "^5.3.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -28,7 +30,7 @@
     "deploy": "gh-pages -d build",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vite test",
+    "test": "vitest",
     "eject": "vite eject",
     "analyze-images": "node scripts/optimize-images.js",
     "optimize-images": "node scripts/optimize-images.js"
@@ -49,8 +51,10 @@
     ]
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.5.0",
-    "vite": "^6.3.5",
-    "vitest": "^3.2.0"
+    "@vitejs/plugin-react": "^6.0.2",
+    "canvas": "^3.2.3",
+    "jsdom": "^29.1.1",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.9"
   }
 }

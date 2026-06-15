@@ -1,14 +1,16 @@
 import React, { useState, createRef } from "react";
 import "./ExperienceCard.css";
-import ColorThief from "colorthief";
+import { getColorSync } from "colorthief";
 
 export default function ExperienceCard({ cardInfo, isDark }) {
   const [colorArrays, setColorArrays] = useState([]);
   const imgRef = createRef();
 
   function getColorArrays() {
-    const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
+    const color = getColorSync(imgRef.current);
+    if (color) {
+      setColorArrays(color.array());
+    }
   }
 
   function rgb(values) {
