@@ -302,7 +302,7 @@ const workExperiences = {
 
 const openSource = {
   githubUserName: "fineanmol",
-  githubConvertedToken: import.meta.env.VITE_GITHUB_TOKEN || "",
+  githubConvertedToken: import.meta.env.VITE_GITHUB_TOKEN || import.meta.env.REACT_APP_GITHUB_TOKEN || "",
   showGithubProfile: true,
   display: true,
 };
