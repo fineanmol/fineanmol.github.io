@@ -17,11 +17,38 @@ export default function Profile() {
   };
 
   const getProfileData = useCallback(() => {
-    // Check if token exists
+    const fetchWithRestFallback = () => {
+      fetch(`https://api.github.com/users/${openSource.githubUserName}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`REST API Error: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((result) => {
+          if (result) {
+            setProfileFunction({
+              name: result.name || result.login,
+              bio: result.bio || "",
+              isHireable: result.hireable || false,
+              avatarUrl: result.avatar_url,
+              location: result.location || "",
+            });
+            setHasValidToken(true);
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching GitHub REST profile data:", error.message);
+          setProfileFunction("Error");
+          openSource.showGithubProfile = "false";
+          setHasValidToken(false);
+        });
+    };
+
+    // If token is missing, directly use REST fallback
     if (!openSource.githubConvertedToken || openSource.githubConvertedToken === "YOUR_GITHUB_TOKEN_HERE") {
-      console.info("ℹ️ GitHub token not configured for profile. Using Contact section instead.");
-      openSource.showGithubProfile = "false";
-      setHasValidToken(false);
+      console.info("ℹ️ GitHub token not configured for profile. Using public REST API fallback.");
+      fetchWithRestFallback();
       return;
     }
 
@@ -47,10 +74,7 @@ export default function Profile() {
     })
       .then((response) => {
         if (response.status === 401) {
-          console.error("Invalid GitHub token for profile. Please check your REACT_APP_GITHUB_TOKEN in .env");
-          openSource.showGithubProfile = "false";
-          setHasValidToken(false);
-          return;
+          throw new Error("Invalid GitHub token");
         }
         if (response.status !== 200) {
           throw new Error(`GitHub API Error: ${response.status}`);
@@ -62,17 +86,12 @@ export default function Profile() {
           setProfileFunction(result.data.user);
           setHasValidToken(true);
         } else {
-          console.info("No GitHub profile data found. Using Contact section instead.");
-          openSource.showGithubProfile = "false";
-          setHasValidToken(false);
+          throw new Error("No profile data found");
         }
       })
       .catch((error) => {
-        console.error("Error fetching GitHub profile data:", error.message);
-        setProfileFunction("Error");
-        console.log("Because of this Error Contact Section is Showed instead of Profile");
-        openSource.showGithubProfile = "false";
-        setHasValidToken(false);
+        console.warn("GraphQL profile fetch failed, falling back to REST API:", error.message);
+        fetchWithRestFallback();
       });
   }, []);
 

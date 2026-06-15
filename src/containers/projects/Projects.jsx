@@ -50,14 +50,74 @@ export default function Projects() {
   const { isDark } = useContext(StyleContext);
 
   const getRepoData = useCallback(() => {
-    // Check if token exists
+    const fetchWithRestFallback = () => {
+      fetch(`https://api.github.com/users/${openSource.githubUserName}/repos?sort=updated&per_page=30`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`REST API Error: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((result) => {
+          if (Array.isArray(result)) {
+            // Sort by stars first, then take top 6
+            const sorted = result
+              .sort((a, b) => b.stargazers_count - a.stargazers_count)
+              .slice(0, 6);
+            
+            const mapped = sorted.map((repo) => ({
+              node: {
+                id: repo.id.toString(),
+                name: repo.name,
+                description: repo.description || "",
+                url: repo.html_url,
+                forkCount: repo.forks_count,
+                stargazers: {
+                  totalCount: repo.stargazers_count,
+                },
+                diskUsage: repo.size,
+                primaryLanguage: repo.language ? {
+                  name: repo.language,
+                  color: getLanguageColor(repo.language),
+                } : null,
+              }
+            }));
+            setRepo(mapped);
+            setHasToken(true);
+          } else {
+            throw new Error("Invalid response format");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching GitHub REST data:", error.message);
+          setHasToken(false);
+        });
+    };
+
+    const getLanguageColor = (lang) => {
+      const colors = {
+        JavaScript: "#f1e05a",
+        TypeScript: "#3178c6",
+        HTML: "#e34c26",
+        CSS: "#563d7c",
+        Python: "#3572A5",
+        Java: "#b07219",
+        Go: "#00ADD8",
+        Ruby: "#701516",
+        "C++": "#f34b7d",
+        "C#": "#178600",
+        PHP: "#4F5D95",
+        Shell: "#89e051",
+      };
+      return colors[lang] || "#8e8ea0";
+    };
+
+    // If token is missing, directly use REST fallback
     if (!openSource.githubConvertedToken || openSource.githubConvertedToken === "YOUR_GITHUB_TOKEN_HERE") {
-      console.info("ℹ️ GitHub token not configured. Set REACT_APP_GITHUB_TOKEN in .env file to display live projects.");
-      setHasToken(false);
+      console.info("ℹ️ GitHub token not configured. Using public REST API fallback.");
+      fetchWithRestFallback();
       return;
     }
-
-    setHasToken(true);
 
     fetch("https://api.github.com/graphql", {
       method: "POST",
@@ -98,7 +158,7 @@ export default function Projects() {
     })
       .then((response) => {
         if (response.status === 401) {
-          throw new Error("Invalid GitHub token. Please check your REACT_APP_GITHUB_TOKEN in .env");
+          throw new Error("Invalid GitHub token.");
         }
         if (response.status !== 200) {
           throw new Error(`GitHub API Error: ${response.status}`);
@@ -108,13 +168,14 @@ export default function Projects() {
       .then((result) => {
         if (result.data && result.data.user && result.data.user.pinnedItems) {
           setRepo(result.data.user.pinnedItems.edges);
+          setHasToken(true);
         } else {
           throw new Error("No pinned repositories found");
         }
       })
       .catch((error) => {
-        console.error("Error fetching GitHub data:", error.message);
-        setHasToken(false);
+        console.warn("GraphQL fetch failed, falling back to REST API:", error.message);
+        fetchWithRestFallback();
       });
   }, []);
 
