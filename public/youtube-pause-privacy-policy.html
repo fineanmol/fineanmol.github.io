@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - YouTube Pause on Tab Switch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 750px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 50px var(--accent-glow);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .logo-placeholder {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            border-radius: 16px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+        }
+
+        .logo-placeholder svg {
+            fill: #ffffff;
+            width: 32px;
+            height: 32px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #ffffff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        p, ul {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1.25rem;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding-left: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .cws-btn:hover {
+            background: rgba(56, 189, 248, 0.1) !important;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Responsive styling */
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-placeholder">
+                <svg viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">YouTube Pause on Tab Switch Extension</p>
+            <p style="text-align: center; margin-top: 1.2rem;">
+                <a class="cws-btn" href="https://chromewebstore.google.com/detail/youtube-pause-on-tab-swit/cmdndknhgabpknljbncefpockcjpmihh?authuser=0&hl=en-GB" target="_blank" style="color: var(--accent-color); text-decoration: none; border: 1px solid var(--accent-color); padding: 0.5rem 1.2rem; border-radius: 99px; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s; background: transparent;">
+                    <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: var(--accent-color);">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg> 
+                    Get it on Chrome Web Store
+                </a>
+            </p>
+        </header>
+
+        <section>
+            <h2>Overview</h2>
+            <p>Your privacy is extremely important to us. The <strong>YouTube Pause on Tab Switch</strong> browser extension is built with a strict privacy-first architecture. It operates entirely locally on your device and does not collect, track, or share any personal information or web browsing activity.</p>
+        </section>
+
+        <section>
+            <h2>Information Collection and Usage</h2>
+            <p>We do not collect any personal data or transmit information to external servers. The extension performs its function (pausing and playing videos) locally in your browser session.</p>
+            <ul>
+                <li><strong>No Analytics:</strong> We do not track how you use the extension.</li>
+                <li><strong>No Cloud Storage:</strong> All extension logic operates in-memory on your device.</li>
+                <li><strong>No Third-Party SDKs:</strong> There are no advertising networks, trackers, or cookies loaded by this extension.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Permissions Used</h2>
+            <p>To perform its single, simple task, the extension requires the following permissions:</p>
+            <ul>
+                <li><strong>tabs / activeTab:</strong> Used to detect when you navigate to or away from a YouTube tab.</li>
+                <li><strong>scripting:</strong> Used to send the play/pause signals to the YouTube video elements.</li>
+                <li><strong>Host Permissions (*://*.youtube.com/*):</strong> Allows the extension to interact only with YouTube.com to control the video player.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be published directly to this page and will go into effect immediately upon posting.</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>If you have any questions or feedback regarding this Privacy Policy, please feel free to reach out via GitHub or email.</p>
+        </section>
+
+        <footer>
+            <p>Hosted on <a href="https://fineanmol.github.io">fineanmol.github.io</a> &bull; Updated June 2026</p>
+        </footer>
+    </div>
+
+</body>
+</html>
